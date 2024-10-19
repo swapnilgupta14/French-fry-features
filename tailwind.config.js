@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         accent: "#134855",
+        textGray: "#393938",
         foreground: "var(--foreground)",
       },
     },

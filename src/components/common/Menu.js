@@ -170,7 +170,7 @@ const Menu = ({ toggleMenu }) => {
             <div
               key={index}
               ref={(el) => (linksRef.current[index] = el)}
-              className={`text-white font-extrabold text-7xl flex items-center justify-between pb-6 ${
+              className={`text-white font-semibold text-7xl flex items-center justify-between pb-6 ${
                 index !== menuLinks.length - 1 ? "border-b-2 border-white" : ""
               }`}
             >
