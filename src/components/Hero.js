@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
+
 const RotatingText = () => {
   const textRef = useRef(null);
 
