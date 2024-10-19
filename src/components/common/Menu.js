@@ -3,9 +3,9 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const Menu = ({ toggleMenu }) => {
-  const menuRef = useRef(null); 
-  const leftSectionRef = useRef(null); 
-  const rightSectionRef = useRef(null); 
+  const menuRef = useRef(null);
+  const leftSectionRef = useRef(null);
+  const rightSectionRef = useRef(null);
   const socialLinksRef = useRef([]);
   const linksRef = useRef([]);
 
