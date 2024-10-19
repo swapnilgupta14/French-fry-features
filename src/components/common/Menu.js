@@ -25,7 +25,7 @@ const Menu = ({ toggleMenu }) => {
 
     tl.fromTo(
       menuRef.current,
-      { yPercent: -100, opacity: 0 },
+      { yPercent: 100, opacity: 0 },
       { duration: 0.8, yPercent: 0, opacity: 1, ease: "power4.out" }
     );
 
@@ -170,12 +170,21 @@ const Menu = ({ toggleMenu }) => {
             <div
               key={index}
               ref={(el) => (linksRef.current[index] = el)}
-              className={`text-white font-semibold text-7xl flex items-center justify-between pb-6 ${
+              className={`text-white font-semibold flex items-center justify-between pb-6 ${
                 index !== menuLinks.length - 1 ? "border-b-2 border-white" : ""
               }`}
             >
               <p className="flex items-end justify-start gap-8">
-                {item.label}
+
+                <div className="group relative cursor-pointer overflow-hidden text-7xl leading-[4.5rem] uppercase">
+                  <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[120%]">
+                    {item.label}
+                  </span>
+                  <span className="absolute left-0 translate-y-[120%] rotate-12 p-1 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
+                    {item.label}
+                  </span>
+                </div>
+
                 <span>
                   <img
                     src="/NE Arrow Icon.svg"
@@ -216,7 +225,7 @@ const Menu = ({ toggleMenu }) => {
                   <a
                     key={social}
                     href="#"
-                    ref={(el) => (socialLinksRef.current[index] = el)} // Store refs for each social link
+                    ref={(el) => (socialLinksRef.current[index] = el)}
                     className="block text-lg font-semibold text-black border-b border-black w-[150px] hover:text-accent transition-all duration-300"
                   >
                     {social}
