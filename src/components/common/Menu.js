@@ -175,7 +175,6 @@ const Menu = ({ toggleMenu }) => {
               }`}
             >
               <p className="flex items-end justify-start gap-8">
-
                 <div className="group relative cursor-pointer overflow-hidden text-7xl leading-[4.5rem] uppercase">
                   <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[120%]">
                     {item.label}
@@ -244,3 +243,44 @@ const Menu = ({ toggleMenu }) => {
 };
 
 export default Menu;
+
+// {
+//   name: "PixelVibe Creations",
+//   label: "3D Product Showcase for Tech Company",
+//   description:
+//     "Designed a 3D product showcase for a leading tech company to highlight their latest gadgets with interactive models and animations.",
+//   type: "3D",
+//   tech: "3D Modeling / Animation / Website Integration",
+//   link: "https://example.com/3d-tech",
+//   image: "/images/p1.png",
+// },
+// {
+//   name: "EvoBrand Collective",
+//   label: "Luxury Real Estate Website",
+//   description:
+//     "Developed a sleek and responsive website for a luxury real estate brand, focusing on high-quality visuals and seamless navigation.",
+//   type: "Website",
+//   tech: "React / Next.js / Tailwind CSS",
+//   link: "https://example.com/luxury-real-estate",
+//   image: "/images/p1.png",
+// },
+// {
+//   name: "AetherWave Design",
+//   label: "Brand Book for Modern Startup",
+//   description:
+//     "Designed a comprehensive brand book outlining the visual identity, tone, and guidelines for a modern tech startup.",
+//   type: "Book Design",
+//   tech: "Adobe Illustrator / InDesign / Photoshop",
+//   link: "https://example.com/startup-brand-book",
+//   image: "/images/p1.png",
+// },
+// {
+//   name: "LuminaGraph Studios",
+//   label: "E-commerce Website for Lifestyle Brand",
+//   description:
+//     "Created a user-friendly e-commerce platform for a lifestyle brand, featuring smooth transitions, and fast checkout process.",
+//   type: "Website",
+//   tech: "Shopify / React / GSAP",
+//   link: "https://example.com/lifestyle-ecommerce",
+//   image: "/images/p1.png",
+// },

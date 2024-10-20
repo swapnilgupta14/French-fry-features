@@ -27,3 +27,10 @@ body {
   font-weight: 550;
   font-style: italic;
 }
+
+
+.char{
+  transform: translateY(115px);
+  transition: transform .5s;
+  clip-path: polygon(0 0, 100% 0, 1005 100%, 0% 100%);
+}
