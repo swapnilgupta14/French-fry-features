@@ -5,6 +5,13 @@ import SplitType from "split-type";
 import { useGSAP } from "@gsap/react";
 import RotatingText from "@/components/common/RotatingText";
 import Button from "../common/Button";
+import { initializeCounters } from "../../utils/animationGSAP/gsapCounter";
+import {
+  FaWhatsapp,
+  FaTelegramPlane,
+  FaPhone,
+  FaInstagram,
+} from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,20 +19,25 @@ const ContactUs = () => {
   const videoRef = useRef(null);
   const blobRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.to(blobRef.current, {
       rotation: 360,
       duration: 8,
       repeat: -1,
       ease: "linear",
     });
-  }, []);
+  });
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play();
     }
   }, []);
+
+  // useEffect(() => {
+  //   const counterElements = document.querySelectorAll("#numberAnimation");
+  //   initializeCounters(counterElements);
+  // }, []);
 
   useGSAP(() => {
     const myText = new SplitType("#text-split");
@@ -74,9 +86,9 @@ const ContactUs = () => {
       <div className="w-[90%] text-center pt-5 md:pt-10 mb-5 md:mb-20 z-10 overflow-hidden">
         <p
           id="text-split"
-          className="text-5xl md:text-[4rem] font-medium text-black leading-tight md:leading-[6rem] text-left relative z-10"
+          className="text-5xl md:text-[4rem] font-medium text-gray-950 leading-tight md:leading-[6rem] text-left relative z-10"
         >
-          We <span className="text-black">design, build, and ship</span>{" "}
+          We design, build, and ship
           <span>world-class digital products for</span>
           <span className="text-accent"> forward-thinking brands.</span>
         </p>
@@ -84,25 +96,60 @@ const ContactUs = () => {
 
       <div className="flex flex-row w-fit gap-20 mb-16 md:mx-20 z-20 self-start">
         <div className="flex flex-col items-start">
-          <p className="text-3xl font-semibold text-black">20+</p>
+          <p id="numberAnimation" className="text-2xl font-medium text-black">
+            20+
+          </p>
           <p className="text-xl text-gray-500">Projects</p>
         </div>
         <div className="flex flex-col items-start">
-          <p className="text-3xl font-semibold text-black">10+</p>
+          <p id="numberAnimation" className="text-2xl font-medium text-black">
+            10+
+          </p>
           <p className="text-xl text-gray-500">Clients</p>
         </div>
         <div className="flex flex-col items-start">
-          <p className="text-3xl font-semibold text-black">5+</p>
+          <p id="numberAnimation" className="text-2xl font-medium text-black">
+            5+
+          </p>
           <p className="text-xl text-gray-500">Years Experience</p>
         </div>
       </div>
 
-      <div className="bg-white md:mx-20 self-start rounded-xl p-5 flex flex-col gap-5 z-10">
-        <p className="font-medium text-fontColor">
-        Get in touch with us to discuss your next project — let's create something amazing together!
+      <div className="bg-white md:mx-16 self-start rounded-xl p-7 flex flex-col gap-5 z-10">
+        <p className="font-medium text-[0.9rem] text-fontColor">
+          Get in touch with us to discuss your next project — let's create
+          something amazing together!
         </p>
-        <div className="z-10 ">
+        <div className="z-10 flex gap-3">
           <Button label="E-mail Us" />
+          <Button
+            label={
+              <>
+                <FaPhone size={18} />
+              </>
+            }
+          />
+          <Button
+            label={
+              <>
+                <FaWhatsapp size={18} />
+              </>
+            }
+          />
+          <Button
+            label={
+              <>
+                <FaTelegramPlane size={18} />
+              </>
+            }
+          />
+          <Button
+            label={
+              <>
+                <FaInstagram size={18} />
+              </>
+            }
+          />
         </div>
       </div>
     </div>

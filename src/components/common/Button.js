@@ -22,8 +22,17 @@ const Button = ({ label }) => {
       xSet(x);
       ySet(y);
 
+      // Animate flair
       gsap.to(flair, {
         scale: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      });
+
+      // Scale and shadow effect on button
+      gsap.to(button, {
+        scale: 1.05, // Scale up the button
+        boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)", // Add shadow
         duration: 0.4,
         ease: "power2.out",
       });
@@ -36,10 +45,19 @@ const Button = ({ label }) => {
 
       gsap.killTweensOf(flair);
 
+      // Reset flair animation
       gsap.to(flair, {
         xPercent: x > 90 ? x + 20 : x < 10 ? x - 20 : x,
         yPercent: y > 90 ? y + 20 : y < 10 ? y - 20 : y,
         scale: 0,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+      // Reset button scale and shadow
+      gsap.to(button, {
+        scale: 1, // Reset scale
+        boxShadow: "none", // Remove shadow
         duration: 0.3,
         ease: "power2.out",
       });
@@ -72,9 +90,9 @@ const Button = ({ label }) => {
   return (
     <button
       ref={buttonRef}
-      className="relative overflow-hidden px-6 py-3 bg-black text-white rounded-full"
+      className="relative overflow-hidden px-4 py-2 bg-gray-950 text-white rounded-full"
     >
-      <span className="relative z-10 text-md font-semibold">{label}</span>
+      <span className="relative z-10 text-sm font-semibold">{label}</span>
       <div
         ref={flairRef}
         className="absolute inset-0 bg-accent rounded-full pointer-events-none"
