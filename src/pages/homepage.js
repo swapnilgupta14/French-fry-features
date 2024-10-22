@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import ContactUs from "@/components/sections/ContactUs";
 import Services from "@/components/sections/Services";
+import Scroller from "@/components/sections/Scroller";
 
 const Homepage = () => {
   return (
@@ -12,10 +13,10 @@ const Homepage = () => {
       <Hero />
       <Projects />
       <ContactUs />
-      <div className="h-[20vh] w-screen">
-
-      </div>
+      <div className="h-[20vh] w-screen"></div>
       <Services />
+      <div className="h-[30vh] w-screen"></div>
+      <Scroller />
     </div>
   );
 };

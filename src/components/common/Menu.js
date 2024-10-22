@@ -144,7 +144,7 @@ const Menu = ({ toggleMenu }) => {
                 src="/RoundedPlus.svg"
                 alt="laptop"
                 className="w-fit rounded-full"
-              />z
+              />
             </span>
             <span>Become a Client</span>
           </button>

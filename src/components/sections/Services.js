@@ -135,6 +135,7 @@ const Services = () => {
               <div className="group relative cursor-pointer text-[4.2rem] leading-[5rem]">
                 <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[140%]">
                   {service.name}
+                  <span className="text-sm">(0{index + 1})</span>
                 </span>
                 <span className="absolute left-0 translate-y-[200%] rotate-12 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
                   {service.name}
