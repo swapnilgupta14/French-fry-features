@@ -56,8 +56,8 @@ const ContactUs = () => {
   });
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-start items-center relative p-8 overflow-hidden">
-      <div className="absolute bottom-0 right-0 z-0">
+    <div className="w-full min-h-screen flex flex-col justify-start items-center relative p-8">
+      <div className="absolute bottom-0 right-0 z-0 overflow-visible">
         <div
           ref={blobRef}
           className="z-0 w-[700px] h-[700px] rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 opacity-30 blur-3xl gradient-blob"
@@ -86,7 +86,7 @@ const ContactUs = () => {
       <div className="w-[90%] text-center pt-5 md:pt-10 mb-5 md:mb-20 z-10 overflow-hidden">
         <p
           id="text-split"
-          className="text-5xl md:text-[4rem] font-medium text-gray-950 leading-tight md:leading-[6rem] text-left relative z-10"
+          className="text-5xl md:text-[4rem] font-medium text-fontColor leading-tight md:leading-[6rem] text-left relative z-10"
         >
           We design, build, and ship
           <span>world-class digital products for</span>
@@ -96,19 +96,19 @@ const ContactUs = () => {
 
       <div className="flex flex-row w-fit gap-20 mb-16 md:mx-20 z-20 self-start">
         <div className="flex flex-col items-start">
-          <p id="numberAnimation" className="text-2xl font-medium text-black">
+          <p id="numberAnimation" className="text-2xl font-medium text-fontColor">
             20+
           </p>
           <p className="text-xl text-gray-500">Projects</p>
         </div>
         <div className="flex flex-col items-start">
-          <p id="numberAnimation" className="text-2xl font-medium text-black">
+          <p id="numberAnimation" className="text-2xl font-medium text-fontColor">
             10+
           </p>
           <p className="text-xl text-gray-500">Clients</p>
         </div>
         <div className="flex flex-col items-start">
-          <p id="numberAnimation" className="text-2xl font-medium text-black">
+          <p id="numberAnimation" className="text-2xl font-medium text-fontColor">
             5+
           </p>
           <p className="text-xl text-gray-500">Years Experience</p>

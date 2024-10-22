@@ -138,18 +138,18 @@ const Menu = ({ toggleMenu }) => {
       <div className="flex justify-between items-center px-9">
         <div className="text-white text-2xl font-bold">Company</div>
         <div className="flex justify-center items-center space-x-3">
-          <button className="bg-white text-black px-4 py-2 rounded-full flex items-center space-x-2">
+          <button className="bg-white text-fontColor px-4 py-2 rounded-full flex items-center space-x-2">
             <span>
               <img
                 src="/RoundedPlus.svg"
                 alt="laptop"
                 className="w-fit rounded-full"
-              />
+              />z
             </span>
             <span>Become a Client</span>
           </button>
           <button
-            className="bg-white text-black rounded-full flex items-center space-x-2"
+            className="bg-white text-fontColor rounded-full flex items-center space-x-2"
             onClick={handleClose}
           >
             <img
@@ -225,7 +225,7 @@ const Menu = ({ toggleMenu }) => {
                     key={social}
                     href="#"
                     ref={(el) => (socialLinksRef.current[index] = el)}
-                    className="block text-lg font-semibold text-black border-b border-black w-[150px] hover:text-accent transition-all duration-300"
+                    className="block text-lg font-semibold text-fontColor border-b border-black w-[150px] hover:text-accent transition-all duration-300"
                   >
                     {social}
                   </a>

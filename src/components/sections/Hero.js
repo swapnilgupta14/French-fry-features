@@ -14,7 +14,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="sticky-container flex md:flex-row items-center justify-between text-black h-[91vh] w-full">
+    <section className="sticky-container flex md:flex-row items-center justify-between text-fontColor h-[91vh] w-full">
       <div className="w-full text-center md:text-left space-y-6 p-10 text-fontColor relative">
         <h1 className="text-3xl md:text-[7rem] leading-tight px-20">
           <span>Crafting</span>

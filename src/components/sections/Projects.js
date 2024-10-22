@@ -99,7 +99,7 @@ const Projects = () => {
           <div className="flex justify-center items-center w-full">
             <button
               className="py-1 px-4 my-3 rounded-full text-white bg-accent z-20"
-              onClick={project.link}
+              onClick={() => console.log("clicked")}
             >
               View Project
             </button>

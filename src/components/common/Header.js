@@ -41,7 +41,7 @@ const Header = () => {
     <header className="w-full z-20">
       <div className="flex items-center justify-between pt-4 px-14">
         <div className="text-2xl font-bold text-teal-800">
-          <Link href="/" className="text-black">
+          <Link href="/" className="text-fontColor">
             Company
           </Link>
         </div>
