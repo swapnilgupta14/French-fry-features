@@ -53,7 +53,7 @@ const Header = () => {
                 key={item.label}
                 href={item.link}
                 onClick={() => setActiveLink(item.label)}
-                className={`mx-1 px-4 py-2 font-medium rounded-full transition-all duration-300 ease-in-out transform aria-hidden:true ${
+                className={`mx-1 px-4 py-2 font-bold rounded-full transition-all duration-300 ease-in-out transform aria-hidden:true ${
                   activeLink === item.label
                     ? "bg-accent text-white"
                     : "text-accent hover:bg-gray-300 hover:text-accent"

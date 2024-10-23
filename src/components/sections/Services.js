@@ -19,28 +19,28 @@ const Services = () => {
   const imageContainerRef = useRef(null);
   const circleRef = useRef(null);
 
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      defaults: { ease: "power3.out" },
-    });
-    tl.fromTo(
-      serviceRef.current,
-      {
-        y: 50,
-        opacity: 0,
-        scale: 0.9,
-      },
-      {
-        duration: 0.7,
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        stagger: 0.1,
-        ease: "back.out(1.7)",
-      },
-      "-=0.7"
-    );
-  });
+  // useGSAP(() => {
+  //   const tl = gsap.timeline({
+  //     defaults: { ease: "power3.out" },
+  //   });
+  //   tl.fromTo(
+  //     serviceRef.current,
+  //     {
+  //       y: 50,
+  //       opacity: 0,
+  //       scale: 0.9,
+  //     },
+  //     {
+  //       duration: 0.7,
+  //       y: 0,
+  //       opacity: 1,
+  //       scale: 1,
+  //       stagger: 0.1,
+  //       ease: "back.out(1.7)",
+  //     },
+  //     "-=0.7"
+  //   );
+  // });
 
   useEffect(() => {
     const rect = imageContainerRef.current.getBoundingClientRect();
@@ -51,8 +51,8 @@ const Services = () => {
   }, []);
 
   const handleMouseMove = (e) => {
-    const x = e.clientX - 430;
-    const y = e.clientY - 430;
+    const x = e.clientX - 390;
+    const y = e.clientY - 410;
 
     gsap.to(circleRef.current, {
       x: x - circleRef.current.offsetWidth / 2,
@@ -69,10 +69,12 @@ const Services = () => {
       duration: 0.05,
       onComplete: () => {
         setCurrentService(service);
+
         gsap.to(imageContainerRef.current, {
           opacity: 1,
           scale: 1,
-          duration: 1,
+          rotation: gsap.utils.random(-3, 3),
+          duration: 0.7,
           ease: "power2.out",
         });
       },
@@ -80,9 +82,9 @@ const Services = () => {
   };
 
   return (
-    <div className="h-screen w-full flex items-center justify-center">
-      <div className="h-screen w-[50%] py-10 flex flex-col items-end gap-16 z-20">
-        <h2 className="self-start px-20 font-medium text-3xl mt-5">
+    <div className="h-screen w-full flex items-center justify-center z-10 ">
+      <div className="h-screen w-[45%] py-10 flex flex-col items-end gap-16 z-20">
+        <h2 className="self-start px-20 font-semibold text-3xl mt-5">
           Service We Offer
         </h2>
         <div
@@ -120,22 +122,21 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="w-[50%] h-screen px-20 py-10 flex items-center justify-center">
-        <ul className="mt-8 space-y-4 z-20">
+      <div className="w-[55%] h-screen px-20 py-10 flex items-center justify-center ">
+        <ul className="mt-8 z-20 p-5 w-full">
           {servicesData.map((service, index) => (
             <li
               key={index}
               ref={(el) => (serviceRef.current[index] = el)}
-              className={`cursor-pointer font-medium text-fontColor hover:text-accent overflow-hidden ${
+              className={`cursor-pointer font-medium text-fontColor hover:text-accent overflow-hidden custom-font ${
                 currentService.name === service.name && "text-accent"
               }`}
-              // onMouseEnter={() => setCurrentService(service)}
               onMouseEnter={() => handleHover(service)}
             >
               <div className="group relative cursor-pointer text-[4.2rem] leading-[5rem]">
-                <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[140%]">
+                <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[140%] ">
                   {service.name}
-                  <span className="text-sm">(0{index + 1})</span>
+                  <span className="text-[1rem] mx-3">(0{index + 1})</span>
                 </span>
                 <span className="absolute left-0 translate-y-[200%] rotate-12 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
                   {service.name}

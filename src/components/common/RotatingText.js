@@ -22,7 +22,7 @@ const RotatingText = ({ text, imageSrc }) => {
   }, []);
 
   return (
-    <div className="relative w-40 h-40 mx-auto md:mx-0">
+    <div className="relative w-40 h-40 mx-auto md:mx-0 custom-font">
       <div
         ref={textRef}
         className="absolute inset-0 w-full h-full"

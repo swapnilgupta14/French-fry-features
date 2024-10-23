@@ -14,9 +14,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="sticky-container flex md:flex-row items-center justify-between text-fontColor h-[91vh] w-full">
+    <section className="sticky-container flex md:flex-row items-center justify-between text-fontColor h-[91vh] w-full overflow-hidden">
       <div className="w-full text-center md:text-left space-y-6 p-10 text-fontColor relative">
-        <h1 className="text-3xl md:text-[7rem] leading-tight px-20">
+        <h1 className="text-3xl md:text-[9rem] leading-tight px-20 custom-font">
           <span>Crafting</span>
 
           <span className="flex items-center">
@@ -29,7 +29,7 @@ const Hero = () => {
                 className="rounded-full border-2 border-black"
               />
             </div>
-            <p className=" text-accent px-2 font-semibold">
+            <p className=" text-accent px-7 font-semibold">
               <span className="poppins-semibold-italic">I</span>MP
               <span className="poppins-semibold-italic">A</span>CTFU
               <span className="poppins-semibold-italic">L</span>

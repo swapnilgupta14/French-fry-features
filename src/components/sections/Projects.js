@@ -29,40 +29,40 @@ const Projects = () => {
       link: "https://example.com/3d-tech",
       image: "/images/p1.png",
     },
-    {
-      name: "EvoBrand Collective",
-      label: "Luxury Real Estate Website",
-      description:
-        "Developed a sleek and responsive website for a luxury real estate brand, focusing on high-quality visuals and seamless navigation.",
-      type: "Website",
-      tech: "React / Next.js / Tailwind CSS",
-      link: "https://example.com/luxury-real-estate",
-      image: "/images/p1.png",
-    },
-    {
-      name: "AetherWave Design",
-      label: "Brand Book for Modern Startup",
-      description:
-        "Designed a comprehensive brand book outlining the visual identity, tone, and guidelines for a modern tech startup.",
-      type: "Book Design",
-      tech: "Adobe Illustrator / InDesign / Photoshop",
-      link: "https://example.com/startup-brand-book",
-      image: "/images/p1.png",
-    },
-    {
-      name: "LuminaGraph Studios",
-      label: "E-commerce Website for Lifestyle Brand",
-      description:
-        "Created a user-friendly e-commerce platform for a lifestyle brand, featuring smooth transitions, and fast checkout process.",
-      type: "Website",
-      tech: "Shopify / React / GSAP",
-      link: "https://example.com/lifestyle-ecommerce",
-      image: "/images/p1.png",
-    },
+    // {
+    //   name: "EvoBrand Collective",
+    //   label: "Luxury Real Estate Website",
+    //   description:
+    //     "Developed a sleek and responsive website for a luxury real estate brand, focusing on high-quality visuals and seamless navigation.",
+    //   type: "Website",
+    //   tech: "React / Next.js / Tailwind CSS",
+    //   link: "https://example.com/luxury-real-estate",
+    //   image: "/images/p1.png",
+    // },
+    // {
+    //   name: "AetherWave Design",
+    //   label: "Brand Book for Modern Startup",
+    //   description:
+    //     "Designed a comprehensive brand book outlining the visual identity, tone, and guidelines for a modern tech startup.",
+    //   type: "Book Design",
+    //   tech: "Adobe Illustrator / InDesign / Photoshop",
+    //   link: "https://example.com/startup-brand-book",
+    //   image: "/images/p1.png",
+    // },
+    // {
+    //   name: "LuminaGraph Studios",
+    //   label: "E-commerce Website for Lifestyle Brand",
+    //   description:
+    //     "Created a user-friendly e-commerce platform for a lifestyle brand, featuring smooth transitions, and fast checkout process.",
+    //   type: "Website",
+    //   tech: "Shopify / React / GSAP",
+    //   link: "https://example.com/lifestyle-ecommerce",
+    //   image: "/images/p1.png",
+    // },
   ];
 
   return (
-    <section className="w-full flex flex-col items-center justify-center gap-2">
+    <section className="w-full flex flex-col items-center justify-center gap-2 overflow-hidden">
       {projectData.map((project, index) => (
         <div
           key={index}

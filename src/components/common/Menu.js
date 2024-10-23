@@ -132,7 +132,7 @@ const Menu = ({ toggleMenu }) => {
 
   return (
     <div
-      className="w-full h-screen bg-accent flex flex-col px-5 py-7 space-y-10"
+      className="w-full h-screen bg-accent flex flex-col px-5 py-7 space-y-10 z-50"
       ref={menuRef}
     >
       <div className="flex justify-between items-center px-9">
@@ -161,9 +161,9 @@ const Menu = ({ toggleMenu }) => {
         </div>
       </div>
 
-      <div className="flex flex-1 gap-10 items-end px-5">
+      <div className="flex flex-1 gap-10 items-end px-5 ">
         <div
-          className="flex-1 space-y-8 flex flex-col justify-end m-5"
+          className="flex-1 flex flex-col justify-end m-5 custom-font"
           ref={leftSectionRef}
         >
           {menuLinks.map((item, index) => (
@@ -175,7 +175,7 @@ const Menu = ({ toggleMenu }) => {
               }`}
             >
               <p className="flex items-end justify-start gap-8">
-                <div className="group relative cursor-pointer overflow-hidden text-7xl leading-[4.5rem] uppercase">
+                <div className="group relative cursor-pointer overflow-hidden text-8xl leading-[6rem] uppercase">
                   <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[120%]">
                     {item.label}
                   </span>
@@ -218,7 +218,7 @@ const Menu = ({ toggleMenu }) => {
           </div>
 
           <div className="flex justify-between items-end">
-            <div className="mt-6 space-y-1">
+            <div className="mt-6 space-y-1 custom-font">
               {["Instagram", "Twitter", "LinkedIn", "WhatsApp"].map(
                 (social, index) => (
                   <a

@@ -8,14 +8,14 @@ import Scroller from "@/components/sections/Scroller";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col justify-start items-center overflow-hidden">
+    <div className="overflow-hidden">
       <Header />
       <Hero />
       <Projects />
       <ContactUs />
-      <div className="h-[20vh] w-screen"></div>
+      <div className="h-[25vh] w-screen"></div>
       <Services />
-      <div className="h-[30vh] w-screen"></div>
+      <div className="h-[25vh] w-screen"></div>
       <Scroller />
     </div>
   );
