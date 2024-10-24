@@ -40,3 +40,8 @@ body {
   clip-path: polygon(0 0, 100% 0, 1005 100%, 0% 100%);
   /* color: #191c1c */
 }
+
+/* Ensure text is black initially */
+.blend-css {
+  mix-blend-mode:color-dodge;
+}
