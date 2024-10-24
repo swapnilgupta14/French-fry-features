@@ -27,23 +27,23 @@ const Scroller = () => {
   }, []);
 
   return (
-    <div className="w-full">
-      <div className="flex w-full p-14">
+    <div className="w-full h-screen">
+      <div className="flex w-full p-14 z-20">
         <div className="w-1/6"></div>
         <div className=" w-5/5 flex justify-end">
-          <p className="text-accent text-[7.5rem] font-semibold leading-[8rem] custom-font">
+          <p className="text-accent text-[8rem] font-semibold leading-[8rem] custom-font">
             {" "}
             We make scrolling worth it.
           </p>
         </div>
       </div>
 
-      <div className="relative h-[100vh] overflow-x-auto">
+      <div className="relative h-[100vh] overflow-x-auto -mt-[31vh] z-10">
         <div
-          className="absolute top-0 left-0 w-[500vw] h-[90vh] flex flex-nowrap z-20 timeline"
+          className="absolute top-0 left-0 w-[500vw] h-[80vh] flex flex-nowrap timeline"
           ref={timelineRef}
         >
-          <section  className="relative w-[30vw] h-full p-[6em_2em_0_2em] flex gap-8 flex-shrink-0">
+          <section  className="relative w-[20vw] h-full p-[6em_2em_0_2em] flex gap-8 flex-shrink-0">
 
           </section>
           <section
@@ -53,19 +53,19 @@ const Scroller = () => {
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-1.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-2.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-3.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
           </section>
@@ -74,22 +74,22 @@ const Scroller = () => {
             id="section-2"
             className="relative w-[100vw] h-full p-[6em_2em_0_2em] flex gap-8 flex-shrink-0"
           >
-            <div className="img img-1 w-[50vw] h-full">
+            <div className="img img-1 w-[50vw] h-full ">
               <img
                 src="/images/banner-2.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-1.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-3.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
           </section>
@@ -115,19 +115,19 @@ const Scroller = () => {
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-3.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-5.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-1 w-[50vw] h-full">
               <img
                 src="/images/banner-1.png"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
           </section>
