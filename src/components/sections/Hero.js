@@ -19,14 +19,11 @@ const Hero = () => {
         <h1 className="text-3xl md:text-[9rem] leading-tight px-20 custom-font">
           <span>Crafting</span>
 
-          <span className="flex items-center">
-            <div className=" inset-0 flex items-center justify-center z-10 hover:cursor-pointer">
-              <Image
-                width={65}
-                height={65}
-                src="/NE Arrow Icon.svg"
+          <span className="flex items-center ">
+            <div className=" inset-0 flex items-center justify-center z-10 hover:cursor-pointer bg-white border-2 border-gray-700 h-20 w-20 rounded-full">
+              <img
+                src="/DownArrow.svg"
                 alt="North East Arrow"
-                className="rounded-full border-2 border-black"
               />
             </div>
             <p className=" text-accent px-7 font-semibold">
@@ -35,6 +32,7 @@ const Hero = () => {
               <span className="poppins-semibold-italic">L</span>
             </p>
           </span>
+
           <span className="">Brand Experience</span>
         </h1>
 
@@ -69,7 +67,7 @@ const Hero = () => {
         <div className="flex items-center absolute top-0 right-96 z-10 hover:cursor-pointer">
           <RotatingText
             text="Crafting Brands • Design Excellence • Innovation •"
-            imageSrc="/NE Arrow Icon.svg" // Path to your image
+            imageSrc="/PlayIcon.svg" // Path to your image
           />
         </div>
       </div>

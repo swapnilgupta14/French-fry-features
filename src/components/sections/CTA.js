@@ -15,7 +15,7 @@ const ThreeSectionComponent = () => {
     sectionRefs.forEach((ref, i) => {
       gsap.to(ref.current, {
         width: hovered === i ? "50%" : hovered === null ? "33.33%" : "25%",
-        duration: 0.2,
+        duration: 0.1,
         ease: "power1.out",
       });
     });
@@ -23,7 +23,7 @@ const ThreeSectionComponent = () => {
     if (hovered === null) {
       gsap.to(sectionRefs[1].current, {
         width: "50%",
-        duration: 0.2,
+        duration: 0.1,
         ease: "power1.out",
       });
     }
@@ -33,23 +33,29 @@ const ThreeSectionComponent = () => {
     <div className="flex h-screen justify-between bg-gray-300">
       <div
         ref={sectionRefs[0]}
-        className="bg-gray-200 h-full cursor-pointer transition-all duration-600"
+        className="bg-gray-200 h-full cursor-pointer transition-all duration-600 z-20"
         onMouseEnter={() => setHovered(0)}
         onMouseLeave={() => setHovered(null)}
       >
         <div className="flex justify-center items-center h-full text-white text-2xl font-bold">
-          Section 1
+          <img
+            className="h-full w-full object-cover"
+            src="/images/banner-1.png"
+          />
         </div>
       </div>
 
       <div
         ref={sectionRefs[1]}
-        className="bg-gray-300 h-full cursor-pointer transition-all duration-600"
+        className="bg-gray-300 h-full cursor-pointer transition-all duration-600 z-20"
         onMouseEnter={() => setHovered(1)}
         onMouseLeave={() => setHovered(null)}
       >
         <div className="flex justify-center items-center h-full text-white text-2xl font-bold">
-          Section 2
+          <img
+            className="h-full w-full object-cover"
+            src="/images/banner-4.png"
+          />
         </div>
       </div>
 
@@ -60,7 +66,10 @@ const ThreeSectionComponent = () => {
         onMouseLeave={() => setHovered(null)}
       >
         <div className="flex justify-center items-center h-full text-white text-2xl font-bold">
-          Section 3
+          <img
+            className="h-full w-full object-cover"
+            src="/images/banner-3.png"
+          />
         </div>
       </div>
     </div>

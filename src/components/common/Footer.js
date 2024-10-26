@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="w-full bg-white rounded-r-3xl ">
 
       </div>
-      <div className=" flex-1 container flex flex-col items-center p-6 space-y-6 md:space-y-0 md:space-x-8 md:flex-col justify-between">
+      <div className=" flex-1 container flex flex-col items-end px-6 md:flex-col justify-between -mb-20">
         <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-40 w-full">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="text-center md:text-left mb-8 md:mb-0">
@@ -50,8 +50,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative font-bold h-[18em] w-full">
-        <p className="w-full text-center text-[18em] text-white">COMPANY</p>
+      <div className="relative font-bold h-[25em] w-full">
+        <p className="w-full text-center text-[22em] text-white custom-font">COMPANY</p>
       </div>
     </footer>
   );

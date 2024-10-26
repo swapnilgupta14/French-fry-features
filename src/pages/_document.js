@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link
           rel="preload"
-          href="/GLDDisplay-Black.woff"
+          href="/GLDDisplay-Black.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

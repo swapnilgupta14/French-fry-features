@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Button from "@/components/common/Button";
 
 const Menu = ({ toggleMenu }) => {
   const menuRef = useRef(null);
@@ -138,16 +139,24 @@ const Menu = ({ toggleMenu }) => {
       <div className="flex justify-between items-center px-9">
         <div className="text-white text-2xl font-bold">Company</div>
         <div className="flex justify-center items-center space-x-3">
-          <button className="bg-white text-fontColor px-4 py-2 rounded-full flex items-center space-x-2">
-            <span>
-              <img
-                src="/RoundedPlus.svg"
-                alt="laptop"
-                className="w-fit rounded-full"
-              />
-            </span>
-            <span>Become a Client</span>
-          </button>
+          <Button
+            bgColor="bg-white"
+            textColor="text-black"
+            flairColor="bg-gray-400"
+            label={
+              <span className="flex justify-center items-center gap-2">
+                <span className="inline-block">
+                  <img
+                    src="/RoundedPlus.svg"
+                    alt="laptop"
+                    className="w-fit rounded-full"
+                  />
+                </span>
+                <span className="inline-block">Become a Client</span>
+              </span>
+            }
+          />
+          {/* <button className="bg-white text-fontColor px-4 py-2 rounded-full flex items-center space-x-2"></button> */}
           <button
             className="bg-white text-fontColor rounded-full flex items-center space-x-2"
             onClick={handleClose}

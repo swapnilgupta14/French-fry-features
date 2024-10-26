@@ -15,14 +15,14 @@ const Scroller = () => {
         translateX: 0,
       },
       {
-        translateX: "-260vw",
+        translateX: "-160vw",
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
           end: "5000 top",
-          scrub: 0.5,
+          scrub: 0.3,
           pin: true,
         },
       }
@@ -42,10 +42,10 @@ const Scroller = () => {
           </p>
         </div>
 
-        <div ref={sectionRef} className="h-[100vh] w-[360vw] flex relative">
+        <div ref={sectionRef} className="h-[100vh] w-[260vw] flex relative">
           <section className="w-[30vw] flex justify-around items-center"></section>
 
-          <section className="w-[100vw] flex justify-around items-end py-10">
+          <section className="w-[100vw] flex justify-around items-end py-10 ">
             <div className="img img-1 w-[30vw] h-[70vh]">
               <img
                 src="/images/banner-1.png"
@@ -96,7 +96,7 @@ const Scroller = () => {
             </p>
           </section> */}
 
-          <section className="w-[100vw] flex justify-around items-end py-10">
+          {/* <section className="w-[100vw] flex justify-around items-end py-10">
             <div className="img img-1 w-[30vw] h-[70vh]">
               <img
                 src="/images/banner-3.png"
@@ -115,7 +115,7 @@ const Scroller = () => {
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
-          </section>
+          </section> */}
 
           {/* <section className="w-[100vw] flex justify-center items-end py-10 flex-col">
             <h1 className="text-2xl font-bold mb-4">Text Section</h1>

@@ -5,7 +5,6 @@ import SplitType from "split-type";
 import { useGSAP } from "@gsap/react";
 import RotatingText from "@/components/common/RotatingText";
 import Button from "../common/Button";
-import { initializeCounters } from "../../utils/animationGSAP/gsapCounter";
 import {
   FaWhatsapp,
   FaTelegramPlane,
@@ -34,10 +33,53 @@ const ContactUs = () => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   const counterElements = document.querySelectorAll("#numberAnimation");
-  //   initializeCounters(counterElements);
-  // }, []);
+  useEffect(() => {
+    // Timeline for number animations
+    const numberTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".number-section",
+        start: "top 80%",
+        scrub: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // Animate numbers with fade-in and upward motion
+    numberTimeline.fromTo(
+      ".numberAnimation",
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.2, ease: "power3.out", stagger: 0.3 }
+    );
+
+    // Timeline for button icon animations
+    gsap.utils.toArray(".contact-buttons").forEach((container) => {
+      const buttonTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          scrub: true,
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Apply the animation to each button inside the container
+      buttonTimeline.fromTo(
+        container.querySelectorAll(".contact-button"),
+        { scale: 0, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.6,
+          ease: "back.out(1.7)",
+          stagger: 0.2,
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   useGSAP(() => {
     const myText = new SplitType("#text-split");
@@ -57,13 +99,6 @@ const ContactUs = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col justify-start items-center relative p-8">
-      {/* <div className="absolute bottom-0 right-0 z-0 overflow-visible">
-        <div
-          ref={blobRef}
-          className="z-0 w-[700px] h-[700px] rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 opacity-30 blur-3xl gradient-blob"
-        ></div>
-      </div> */}
-
       <div className="absolute bottom-20 right-20 w-[23rem] hover:cursor-pointer">
         <video
           ref={videoRef}
@@ -94,21 +129,30 @@ const ContactUs = () => {
         </p>
       </div>
 
-      <div className="flex flex-row w-fit gap-20 mb-16 md:mx-20 z-20 self-start">
+      <div className=" number-section flex flex-row w-fit gap-20 mb-16 md:mx-20 z-20 self-start">
         <div className="flex flex-col items-start">
-          <p id="numberAnimation" className="text-2xl font-bold text-fontColor">
+          <p
+            id="numberAnimation"
+            className="numberAnimation text-2xl font-bold text-fontColor"
+          >
             20+
           </p>
           <p className="text-md text-gray-500">Projects</p>
         </div>
         <div className="flex flex-col items-start">
-          <p id="numberAnimation" className="text-2xl font-bold text-fontColor">
+          <p
+            id="numberAnimation"
+            className="numberAnimation text-2xl font-bold text-fontColor"
+          >
             10+
           </p>
           <p className="text-md text-gray-500">Clients</p>
         </div>
         <div className="flex flex-col items-start">
-          <p id="numberAnimation" className="text-2xl font-bold text-fontColor">
+          <p
+            id="numberAnimation"
+            className="numberAnimation text-2xl font-bold text-fontColor"
+          >
             5+
           </p>
           <p className="text-md text-gray-500">Years Experience</p>
@@ -120,37 +164,13 @@ const ContactUs = () => {
           Get in touch with us to discuss your next project — let's create
           something amazing together!
         </p>
-        <div className="z-10 flex gap-3">
-          <Button label="E-mail Us" />
-          <Button
-            label={
-              <>
-                <FaPhone size={18} />
-              </>
-            }
-          />
-          <Button
-            label={
-              <>
-                <FaWhatsapp size={18} />
-              </>
-            }
-          />
-          <Button
-            label={
-              <>
-                <FaTelegramPlane size={18} />
-              </>
-            }
-          />
-          <Button
-            label={
-              <>
-                <FaInstagram size={18} />
-              </>
-            }
-          />
-        </div>
+        <div className="z-10 flex gap-3 contact-buttons section-1">
+        <Button className="contact-button" label="E-mail Us" />
+        <Button className="contact-button" label={<FaPhone size={18} />} />
+        <Button className="contact-button" label={<FaWhatsapp size={18} />} />
+        <Button className="contact-button" label={<FaTelegramPlane size={18} />} />
+        <Button className="contact-button" label={<FaInstagram size={18} />} />
+      </div>
       </div>
     </div>
   );

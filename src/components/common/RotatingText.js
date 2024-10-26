@@ -41,11 +41,11 @@ const RotatingText = ({ text, imageSrc }) => {
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <Image
-          width={65}
-          height={65}
+          width={30}
+          height={30}
           src={imageSrc}
           alt="North East Arrow"
-          className="rounded-full border-2 border-black"
+          className="rounded-full border-2 border-black bg-white h-16 w-16"
         />
       </div>
     </div>

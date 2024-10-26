@@ -91,7 +91,7 @@ const Button = ({
   return (
     <button
       ref={buttonRef}
-      className={`relative overflow-hidden px-4 py-2 ${bgColor} ${textColor} rounded-full`}
+      className={`relative overflow-hidden px-4 py-2 ${bgColor} ${textColor} rounded-full z-20`}
     >
       <span className="relative z-10 text-sm font-semibold">{label}</span>
       <div

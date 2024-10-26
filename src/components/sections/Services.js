@@ -85,7 +85,7 @@ const Services = () => {
     <div className="h-screen w-full flex items-center justify-center z-10 ">
       <div className="h-screen w-[45%] py-10 flex flex-col items-end gap-16 z-20">
         <h2 className="self-start px-20 font-semibold text-3xl mt-5">
-          Service We Offer
+          Services We Offer
         </h2>
         <div
           className="relative flex items-center justify-center w-[80%] h-[80%] object-cover overflow-hidden rounded-3xl shadow-lg hover:cursor-pointer"
