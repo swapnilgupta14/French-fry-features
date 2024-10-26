@@ -15,7 +15,7 @@ const Scroller = () => {
         translateX: 0,
       },
       {
-        translateX: "-430vw",
+        translateX: "-260vw",
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -36,13 +36,13 @@ const Scroller = () => {
   return (
     <div className="scroller-container overflow-hidden">
       <div ref={triggerRef}>
-        <div className="blend-css scroller-fixed-text fixed top-10 right-0 w-[80%] flex justify-center z-20 leading-[8rem]">
-          <p className="custom-font text-[7.5rem] font-bold text-accent p-3 rounded-md">
+        <div className="blend-css scroller-fixed-text fixed top-12 right-0 w-[80%] flex justify-center z-20 leading-[8rem]">
+          <p className="custom-font text-[8rem] font-bold text-accent p-3 rounded-md">
             We make scrolling worth it.
           </p>
         </div>
 
-        <div ref={sectionRef} className="h-[100vh] w-[530vw] flex relative">
+        <div ref={sectionRef} className="h-[100vh] w-[360vw] flex relative">
           <section className="w-[30vw] flex justify-around items-center"></section>
 
           <section className="w-[100vw] flex justify-around items-end py-10">
@@ -87,14 +87,14 @@ const Scroller = () => {
             </div>
           </section>
 
-          <section className="w-[100vw] flex justify-center items-end py-10 flex-col ">
+          {/* <section className="w-[100vw] flex justify-center items-end py-10 flex-col ">
             <h1 className="text-2xl font-bold mb-4">Text Section</h1>
             <p className="text-lg w-[60%] text-center">
               This is a sample paragraph text. The height and width are adjusted
               for consistent design across the sections, providing a
               well-balanced layout.
             </p>
-          </section>
+          </section> */}
 
           <section className="w-[100vw] flex justify-around items-end py-10">
             <div className="img img-1 w-[30vw] h-[70vh]">
@@ -117,13 +117,14 @@ const Scroller = () => {
             </div>
           </section>
 
-          <section className="w-[100vw] flex justify-center items-end py-10 flex-col">
+          {/* <section className="w-[100vw] flex justify-center items-end py-10 flex-col">
             <h1 className="text-2xl font-bold mb-4">Text Section</h1>
             <p className="text-lg w-[60%] text-center">
               This is a sample paragraph text. The last section follows a
               similar structure to maintain consistency and balance.
             </p>
-          </section>
+          </section> */}
+          <section className="w-[30vw] flex justify-around items-center"></section>
         </div>
       </div>
     </div>
