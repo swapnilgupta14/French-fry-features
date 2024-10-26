@@ -45,7 +45,7 @@ const Header = () => {
             Company
           </Link>
         </div>
-        <nav className="hidden md:visible lg:visible md:flex lg:flex text-sm bg-white rounded-full py-1 m-2 border-1 border-accent aria-hidden:true">
+        <nav className="hidden md:visible lg:visible md:flex lg:flex text-sm bg-white rounded-full py-1 m-2 border-1 border-accent aria-hidden:true z-20">
           {navLinks.map((item) => {
             return (
               <Link
