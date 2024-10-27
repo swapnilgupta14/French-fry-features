@@ -16,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ContactUs = () => {
   const videoRef = useRef(null);
+  const blobRef = useRef(null);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -36,6 +37,13 @@ const ContactUs = () => {
         end: "top 40%",
         scrub: true,
       },
+    });
+
+    gsap.to(blobRef.current, {
+      rotation: 360,
+      duration: 8,
+      repeat: -1,
+      ease: "linear",
     });
 
     const numberTimeline = gsap.timeline({
@@ -83,6 +91,12 @@ const ContactUs = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col justify-start items-center relative p-8">
+      <div className="absolute bottom-0 right-0 z-0 overflow-visible">
+        <div
+          ref={blobRef}
+          className="z-0 w-[700px] h-[700px] rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 opacity-30 blur-3xl gradient-blob"
+        ></div>
+      </div>
       <div className="absolute bottom-20 right-20 w-[23rem] hover:cursor-pointer">
         <video
           ref={videoRef}
