@@ -61,13 +61,13 @@ const CustomCursor = () => {
     <>
       <div
         ref={circleRef}
-        className="w-8 h-8 border border-black rounded-full fixed top-0 left-0 pointer-events-none"
+        className="w-8 h-8 border border-black rounded-full fixed top-0 left-0 pointer-events-none cursor-cicle"
         style={{ zIndex: 10 }}
       ></div>
 
       <div
         ref={dotRef}
-        className="w-2 h-2 bg-accent rounded-full fixed top-0 left-0 pointer-events-none"
+        className="w-2 h-2 bg-accent rounded-full fixed top-0 left-0 pointer-events-none dot-color"
         style={{ zIndex: 10 }}
       ></div>
     </>

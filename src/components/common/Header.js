@@ -38,14 +38,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full z-20">
-      <div className="flex items-center justify-between pt-4 px-14">
+    <header className="w-full ">
+      <div className="flex items-center justify-between pt-4 px-14 ">
         <div className="text-2xl font-bold text-teal-800">
           <Link href="/" className="text-fontColor">
             Company
           </Link>
         </div>
-        <nav className="hidden md:visible lg:visible md:flex lg:flex text-sm bg-white rounded-full py-1 m-2 border-1 border-accent aria-hidden:true">
+        <nav className="hidden md:visible lg:visible md:flex lg:flex text-sm bg-white rounded-full py-1 m-2 border-1 border-accent aria-hidden:true z-20">
           {navLinks.map((item) => {
             return (
               <Link

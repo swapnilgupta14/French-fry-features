@@ -16,6 +16,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
   useEffect(() => {
+    const animatedSection = document.querySelector(".animated-section");
+    const handleMouseEnter = () => {
+      const target = document.querySelector(".dot-color");
+      target.style.background = "black";
+    };
+
+    const handleMouseLeave = () => {
+      const target = document.querySelector(".dot-color");
+      target.style.background = "#134855";
+    
+    };
+
+    animatedSection.addEventListener("mouseenter", handleMouseEnter);
+    animatedSection.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      animatedSection.removeEventListener("mouseenter", handleMouseEnter);
+      animatedSection.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
+  useEffect(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".animated-section",
@@ -60,7 +82,6 @@ const Homepage = () => {
       <Scroller />
       <div className="h-[40vh] w-screen"></div>
 
-      {/* Animated section */}
       <div className="animated-section h-[80vh] w-screen flex flex-col justify-center items-center bg-accent text-white px-4 space-y-8">
         <div className="text-center max-w-2xl">
           <h2 className="heading text-3xl md:text-7xl mb-10 leading-relaxed custom-font">

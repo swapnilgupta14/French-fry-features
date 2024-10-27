@@ -5,31 +5,30 @@ import UseLenis from "../utils/customHooks/UseLenis";
 
 export default function Home() {
   UseLenis();
-  const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    // Animate the loading progress
-    const tl = gsap.timeline({
-      onComplete: () => setIsLoading(false),
-    });
+  // useEffect(() => {
+  //   // Animate the loading progress
+  //   const tl = gsap.timeline({
+  //     onComplete: () => setIsLoading(false),
+  //   });
 
-    tl.to(
-      {},
-      {
-        duration: 3, // adjust for total loading time
-        onUpdate: () => {
-          // Progress from 0 to 100
-          setProgress((tl.progress() * 100).toFixed(0));
-        },
-      }
-    );
-  }, []);
+  //   tl.to(
+  //     {},
+  //     {
+  //       duration: 3,
+  //       onUpdate: () => {
+  //         setProgress((tl.progress() * 100).toFixed(0));
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   return <>{isLoading ? <Loader progress={progress} /> : <Homepage />}</>;
 }
 
-// Loader Component
 function Loader({ progress }) {
   useEffect(() => {
     gsap.fromTo(
