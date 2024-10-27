@@ -16,16 +16,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ContactUs = () => {
   const videoRef = useRef(null);
-  const blobRef = useRef(null);
-
-  useGSAP(() => {
-    gsap.to(blobRef.current, {
-      rotation: 360,
-      duration: 8,
-      repeat: -1,
-      ease: "linear",
-    });
-  });
 
   useEffect(() => {
     if (videoRef.current) {
@@ -34,7 +24,20 @@ const ContactUs = () => {
   }, []);
 
   useEffect(() => {
-    // Timeline for number animations
+    const myText = new SplitType("#text-split");
+    gsap.to(".char", {
+      y: 0,
+      stagger: 0.09,
+      duration: 0.8,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: "#text-split",
+        start: "top 90%",
+        end: "top 40%",
+        scrub: true,
+      },
+    });
+
     const numberTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".number-section",
@@ -44,14 +47,12 @@ const ContactUs = () => {
       },
     });
 
-    // Animate numbers with fade-in and upward motion
     numberTimeline.fromTo(
       ".numberAnimation",
       { y: 30, opacity: 0 },
       { y: 0, opacity: 1, duration: 1.2, ease: "power3.out", stagger: 0.3 }
     );
 
-    // Timeline for button icon animations
     gsap.utils.toArray(".contact-buttons").forEach((container) => {
       const buttonTimeline = gsap.timeline({
         scrollTrigger: {
@@ -62,7 +63,6 @@ const ContactUs = () => {
         },
       });
 
-      // Apply the animation to each button inside the container
       buttonTimeline.fromTo(
         container.querySelectorAll(".contact-button"),
         { scale: 0, opacity: 0 },
@@ -80,22 +80,6 @@ const ContactUs = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-
-  useGSAP(() => {
-    const myText = new SplitType("#text-split");
-    gsap.to(".char", {
-      y: 0,
-      stagger: 0.09,
-      duration: 0.8,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: "#text-split",
-        start: "top 90%",
-        end: "top 40%",
-        scrub: true,
-      },
-    });
-  });
 
   return (
     <div className="w-full min-h-screen flex flex-col justify-start items-center relative p-8">
@@ -165,12 +149,18 @@ const ContactUs = () => {
           something amazing together!
         </p>
         <div className="z-10 flex gap-3 contact-buttons section-1">
-        <Button className="contact-button" label="E-mail Us" />
-        <Button className="contact-button" label={<FaPhone size={18} />} />
-        <Button className="contact-button" label={<FaWhatsapp size={18} />} />
-        <Button className="contact-button" label={<FaTelegramPlane size={18} />} />
-        <Button className="contact-button" label={<FaInstagram size={18} />} />
-      </div>
+          <Button className="contact-button" label="E-mail Us" />
+          <Button className="contact-button" label={<FaPhone size={18} />} />
+          <Button className="contact-button" label={<FaWhatsapp size={18} />} />
+          <Button
+            className="contact-button"
+            label={<FaTelegramPlane size={18} />}
+          />
+          <Button
+            className="contact-button"
+            label={<FaInstagram size={18} />}
+          />
+        </div>
       </div>
     </div>
   );
