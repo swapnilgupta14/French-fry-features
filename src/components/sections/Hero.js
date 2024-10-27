@@ -67,7 +67,7 @@ const Hero = () => {
         <div className="flex items-center absolute top-0 right-96 z-10 hover:cursor-pointer">
           <RotatingText
             text="Crafting Brands • Design Excellence • Innovation •"
-            imageSrc="/PlayIcon.svg" // Path to your image
+            imageSrc="/NE Arrow Icon.svg"
           />
         </div>
       </div>
