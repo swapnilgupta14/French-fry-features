@@ -4,13 +4,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 const servicesData = [
-  { name: "Branding", mediaType: "image", src: "/images/S1.jpg" },
-  { name: "Brand Strategy", mediaType: "image", src: "/images/S2.jpg" },
-  { name: "Motion Graphics", mediaType: "image", src: "/images/S3.jpg" },
-  { name: "Video Editing", mediaType: "image", src: "/images/S1.jpg" },
-  { name: "3D Animation", mediaType: "image", src: "/images/S2.jpg" },
-  { name: "Web Design", mediaType: "image", src: "/images/S1.jpg" },
-  { name: "Advertising", mediaType: "image", src: "/images/S3.jpg" },
+  { name: "Web Apps", mediaType: "image", src: "/images/Potrait/P1.png" },
+  { name: "B2B Websites", mediaType: "image", src: "/images/Potrait/P2.png" },
+  { name: "UI/UX Designing", mediaType: "image", src: "/images/Potrait/P3.png" },
+  { name: "Shopify", mediaType: "image", src: "/images/Potrait/P6.png" },
+  { name: "Framer", mediaType: "image", src: "/images/Potrait/P7.png" },
 ];
 
 const Services = () => {
@@ -18,29 +16,6 @@ const Services = () => {
   const serviceRef = useRef([]);
   const imageContainerRef = useRef(null);
   const circleRef = useRef(null);
-
-  // useGSAP(() => {
-  //   const tl = gsap.timeline({
-  //     defaults: { ease: "power3.out" },
-  //   });
-  //   tl.fromTo(
-  //     serviceRef.current,
-  //     {
-  //       y: 50,
-  //       opacity: 0,
-  //       scale: 0.9,
-  //     },
-  //     {
-  //       duration: 0.7,
-  //       y: 0,
-  //       opacity: 1,
-  //       scale: 1,
-  //       stagger: 0.1,
-  //       ease: "back.out(1.7)",
-  //     },
-  //     "-=0.7"
-  //   );
-  // });
 
   useEffect(() => {
     const rect = imageContainerRef.current.getBoundingClientRect();

@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import Header from "@/components/common/Header";
 import Hero from "@/components/sections/Hero";
-import Projects from "@/components/sections/Projects";
+import Projects from "@/pages/Projects";
 import ContactUs from "@/components/sections/ContactUs";
 import Services from "@/components/sections/Services";
 import Scroller from "@/components/sections/Scroller";
@@ -99,6 +99,7 @@ const Homepage = () => {
             bgColor="bg-white"
             textColor="text-black"
             flairColor="bg-gray-400"
+            path = "/Projects"
           />
         </div>
       </div>

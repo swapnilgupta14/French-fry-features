@@ -44,7 +44,7 @@ body {
 }
 
 .blend-css {
-  mix-blend-mode: color-dodge;
+  mix-blend-mode:luminosity;
 }
 
 /* @keyframes breathe {

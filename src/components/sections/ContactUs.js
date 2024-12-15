@@ -49,7 +49,7 @@ const ContactUs = () => {
     const numberTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".number-section",
-        start: "top 80%",
+        start: "top bottom",
         scrub: true,
         toggleActions: "play none none reverse",
       },
@@ -58,8 +58,9 @@ const ContactUs = () => {
     numberTimeline.fromTo(
       ".numberAnimation",
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, ease: "power3.out", stagger: 0.3 }
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out", stagger: 0.2 }
     );
+    
 
     gsap.utils.toArray(".contact-buttons").forEach((container) => {
       const buttonTimeline = gsap.timeline({
@@ -133,7 +134,7 @@ const ContactUs = () => {
             id="numberAnimation"
             className="numberAnimation text-2xl font-bold text-fontColor"
           >
-            20+
+            10+
           </p>
           <p className="text-md text-gray-500">Projects</p>
         </div>
@@ -151,7 +152,7 @@ const ContactUs = () => {
             id="numberAnimation"
             className="numberAnimation text-2xl font-bold text-fontColor"
           >
-            5+
+            1+
           </p>
           <p className="text-md text-gray-500">Years Experience</p>
         </div>
@@ -164,7 +165,6 @@ const ContactUs = () => {
         </p>
         <div className="z-10 flex gap-3 contact-buttons section-1">
           <Button className="contact-button" label="E-mail Us" />
-          <Button className="contact-button" label={<FaPhone size={18} />} />
           <Button className="contact-button" label={<FaWhatsapp size={18} />} />
           <Button
             className="contact-button"

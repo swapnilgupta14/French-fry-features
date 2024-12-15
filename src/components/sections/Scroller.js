@@ -48,19 +48,19 @@ const Scroller = () => {
           <section className="w-[100vw] flex justify-around items-end py-10 ">
             <div className="img img-1 w-[30vw] h-[70vh]">
               <img
-                src="/images/banner-1.png"
+                src="/images/b2.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-2 w-[30vw] h-[70vh]">
               <img
-                src="/images/banner-2.png"
+                src="/images/b1.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-3 w-[30vw] h-[70vh]">
               <img
-                src="/images/banner-3.png"
+                src="/images/b3.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
@@ -69,19 +69,19 @@ const Scroller = () => {
           <section className="w-[100vw] flex justify-around items-end py-10">
             <div className="img img-1 w-[30vw] h-[70vh]">
               <img
-                src="/images/banner-2.png"
+                src="/images/b1.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-2 w-[30vw] h-[70vh]">
               <img
-                src="/images/banner-1.png"
+                src="/images/b2.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-3 w-[30vw] h-[70vh]">
               <img
-                src="/images/banner-3.png"
+                src="/images/b3.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>

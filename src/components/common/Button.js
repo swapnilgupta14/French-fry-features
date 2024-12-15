@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 const Button = ({
   label,
-  bgColor = "bg-gray-950", // default button background color
-  textColor = "text-white", // default text color
-  flairColor = "bg-accent", // default flair color
+  bgColor = "bg-gray-950", 
+  textColor = "text-white", 
+  flairColor = "bg-accent", 
+  path = "/",
 }) => {
   const flairRef = useRef(null);
   const buttonRef = useRef(null);
@@ -89,23 +91,25 @@ const Button = ({
   }, []);
 
   return (
-    <button
-      ref={buttonRef}
-      className={`relative overflow-hidden px-4 py-2 ${bgColor} ${textColor} rounded-full z-20`}
-    >
-      <span className="relative z-10 text-sm font-semibold">{label}</span>
-      <div
-        ref={flairRef}
-        className={`absolute inset-0 ${flairColor} rounded-full pointer-events-none`}
-        style={{
-          width: "100%",
-          height: "100%",
-          left: "-25%",
-          top: "-25%",
-          transform: "translate(-50%, -50%) scale(0)",
-        }}
-      ></div>
-    </button>
+    <Link href={path}>
+      <button
+        ref={buttonRef}
+        className={`relative overflow-hidden px-4 py-2 ${bgColor} ${textColor} rounded-full z-20`}
+      >
+        <span className="relative z-10 text-sm font-semibold">{label}</span>
+        <div
+          ref={flairRef}
+          className={`absolute inset-0 ${flairColor} rounded-full pointer-events-none`}
+          style={{
+            width: "100%",
+            height: "100%",
+            left: "-25%",
+            top: "-25%",
+            transform: "translate(-50%, -50%) scale(0)",
+          }}
+        ></div>
+      </button>
+    </Link>
   );
 };
 

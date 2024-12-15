@@ -11,9 +11,9 @@ const Menu = ({ toggleMenu }) => {
   const linksRef = useRef([]);
 
   const menuLinks = [
-    { label: "Home", link: "#" },
+    { label: "Home", link: "/" },
     { label: "About Us", link: "#" },
-    { label: "Work", link: "#" },
+    { label: "Projects", link: "/Projects" },
     { label: "Our Services", link: "#" },
     { label: "Contact Us", link: "#" },
   ];
@@ -137,7 +137,7 @@ const Menu = ({ toggleMenu }) => {
       ref={menuRef}
     >
       <div className="flex justify-between items-center px-9">
-        <div className="text-white text-2xl font-bold">Company</div>
+        <div className="text-white text-2xl font-bold">Frencg Fry Features</div>
         <div className="flex justify-center items-center space-x-3">
           <Button
             bgColor="bg-white"
@@ -176,32 +176,34 @@ const Menu = ({ toggleMenu }) => {
           ref={leftSectionRef}
         >
           {menuLinks.map((item, index) => (
-            <div
-              key={index}
-              ref={(el) => (linksRef.current[index] = el)}
-              className={`text-white font-semibold flex items-center justify-between pb-6 ${
-                index !== menuLinks.length - 1 ? "border-b-2 border-white" : ""
-              }`}
-            >
-              <p className="flex items-end justify-start gap-8">
-                <div className="group relative cursor-pointer overflow-hidden text-8xl leading-[6rem] uppercase">
-                  <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[120%]">
-                    {item.label}
-                  </span>
-                  <span className="absolute left-0 translate-y-[120%] rotate-12 p-1 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
-                    {item.label}
-                  </span>
-                </div>
+            <Link href={item?.link}>
+              <div
+                key={index}
+                ref={(el) => (linksRef.current[index] = el)}
+                className={`text-white font-semibold flex items-center justify-between pb-6 ${
+                  index !== menuLinks.length - 1
+                    ? "border-b-2 border-white"
+                    : ""
+                }`}
+              >
+                <p className="flex items-end justify-start gap-8">
+                  <div className="group relative cursor-pointer overflow-hidden text-8xl leading-[6rem] uppercase">
+                    <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[120%]">
+                      {item.label}
+                    </span>
+                    <span className="absolute left-0 translate-y-[120%] rotate-12 p-1 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
+                      {item.label}
+                    </span>
+                  </div>
 
-                <span>
                   <img
                     src="/NE Arrow Icon.svg"
                     alt="laptop"
                     className="w-fit rounded-full transition-transform duration-300 hover:rotate-180 hover:cursor-pointer"
                   />
-                </span>
-              </p>
-            </div>
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -219,10 +221,10 @@ const Menu = ({ toggleMenu }) => {
             </div>
             <p className="text-sm font-semibold">Reach out to us at:</p>
             <a
-              href="mailto:contact@company.com"
+              href="mailto:contact@frenchfryfeatures.com"
               className="text-lg font-semibold"
             >
-              contact@company.com
+              contact@frenchfryfeatures.com
             </a>
           </div>
 
@@ -242,7 +244,7 @@ const Menu = ({ toggleMenu }) => {
               )}
             </div>
             <div className="mt-6 text-sm text-gray-500">
-              Company ©2024 <br /> Privacy Policy & Cookies
+              French Fry Features ©2024 <br /> Privacy Policy & Cookies
             </div>
           </div>
         </div>

@@ -46,12 +46,12 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-white text-sm p-4 rounded-md  w-full">
-          © 2024 Company. All rights reserved.
+          © 2024 French Fry Features. All rights reserved.
         </div>
       </div>
 
-      <div className="relative font-bold h-[25em] w-full">
-        <p className="w-full text-center text-[22em] text-white custom-font">COMPANY</p>
+      <div className="relative font-bold h-[25em] w-full  -mb-10">
+        <p className="w-full text-center text-[19em] text-white custom-font">FRENCH FRY</p>
       </div>
     </footer>
   );

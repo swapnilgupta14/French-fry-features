@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
-import { MdHome, MdInfo, MdWork, MdContactPhone } from "react-icons/md";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import Menu from "@/components/common/Menu";
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState("Home");
-
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,15 +14,15 @@ const Header = () => {
   const navLinks = [
     {
       label: "Home",
-      link: "#",
+      link: "/",
     },
     {
       label: "About",
       link: "#",
     },
     {
-      label: "Work",
-      link: "#",
+      label: "Projects",
+      link: "/Projects",
     },
     {
       label: "Services",
@@ -38,23 +35,29 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full ">
-      <div className="flex items-center justify-between pt-4 px-14 ">
+    <header className="w-full">
+      <div className="flex items-center justify-between pt-4 px-14">
         <div className="text-2xl font-bold text-teal-800">
           <Link href="/" className="text-fontColor">
-            Company
+            French Fry
           </Link>
         </div>
         <nav className="hidden md:visible lg:visible md:flex lg:flex text-sm bg-white rounded-full py-1 m-2 border-1 border-accent aria-hidden:true z-20">
           {navLinks.map((item) => {
+            // Check if the current pathname matches the link
+            // For home route, do an exact match, for others use startsWith
+            const isActive = 
+              item.link === '/' 
+                ? pathname === item.link 
+                : pathname.startsWith(item.link);
+
             return (
               <Link
                 id={item.label}
                 key={item.label}
                 href={item.link}
-                onClick={() => setActiveLink(item.label)}
                 className={`mx-1 px-4 py-2 font-bold rounded-full transition-all duration-300 ease-in-out transform aria-hidden:true ${
-                  activeLink === item.label
+                  isActive
                     ? "bg-accent text-white"
                     : "text-accent hover:bg-gray-300 hover:text-accent"
                 }`}
@@ -65,11 +68,15 @@ const Header = () => {
           })}
         </nav>
 
-        <button aria-label="Toggle Menu" className="flex p-2" onClick={toggleMenu} >
+        <button 
+          aria-label="Toggle Menu" 
+          className="flex p-2" 
+          onClick={toggleMenu}
+        >
           <img
             src="/MenuIcon.svg"
-            alt="laptop"
-            className="w-full rounded-lg items-center justify-center "
+            alt="Menu"
+            className="w-full rounded-lg items-center justify-center"
           />
         </button>
 
@@ -84,35 +91,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// {isOpen && (
-//   <nav className="absolute top-16 right-0 bg-white shadow-md rounded-lg w-48 z-10">
-//     <ul className="flex flex-col space-y-4 p-4">
-//       <li>
-//         <Link href="/" className="text-teal-900 flex items-center" onClick={toggleMenu}>
-//           <MdHome className="mr-2" /> Home
-//         </Link>
-//       </li>
-//       <li>
-//         <Link href="/about" className="text-teal-900 flex items-center" onClick={toggleMenu}>
-//           <MdInfo className="mr-2" /> About
-//         </Link>
-//       </li>
-//       <li>
-//         <Link href="/work" className="text-teal-900 flex items-center" onClick={toggleMenu}>
-//           <MdWork className="mr-2" /> Work
-//         </Link>
-//       </li>
-//       <li>
-//         <Link href="/services" className="text-teal-900 flex items-center" onClick={toggleMenu}>
-//           <MdWork className="mr-2" /> Services
-//         </Link>
-//       </li>
-//       <li>
-//         <Link href="/contact" className="text-teal-900 flex items-center" onClick={toggleMenu}>
-//           <MdContactPhone className="mr-2" /> Contact
-//         </Link>
-//       </li>
-//     </ul>
-//   </nav>
-// )}
