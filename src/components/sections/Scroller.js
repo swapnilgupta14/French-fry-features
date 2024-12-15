@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import Link from "next/link";
 
 const Scroller = () => {
   const sectionRef = useRef(null);
@@ -42,39 +44,59 @@ const Scroller = () => {
           </p>
         </div>
 
-        <div ref={sectionRef} className="h-[70vh] w-[260vw] flex relative gap-10">
+        <div
+          ref={sectionRef}
+          className="h-[70vh] w-[250vw] flex relative gap-10"
+        >
           <section className="w-[30vw] flex justify-around items-center"></section>
 
-          <section className="w-[100vw] flex justify-around items-end gap-10 ">
-            <div className="img img-1 w-[60vw] h-[60vh]">
-              <img
-                src="/images/entise3.jpg"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-            <div className="img img-2 w-[60vw] h-[60vh]">
-              <img
-                src="/images/nexa.jpg"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-          </section>
-
-          <section className="w-[100vw] flex justify-around items-end gap-10">
-            <div className="img img-1 w-[60vw] h-[60vh]">
-              <img
-                src="/images/good.jpg"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-            <div className="img img-2 w-[60vw] h-[60vh]">
-              <img
-                src="/images/b2.jpg"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-
-          </section>
+          <div className="w-[300vw] flex justify-around items-end gap-10">
+            <Link href={"/projects/entise"}>
+              <div className="img img-1 w-[60vw] h-[60vh] relative">
+                <Image
+                  src="/images/entise3.jpg"
+                  alt="Entise"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-3xl"
+                />
+              </div>
+            </Link>
+            <Link href={"projects/nexa"}>
+              <div className="img img-2 w-[60vw] h-[60vh] relative">
+                <Image
+                  src="/images/nexa.jpg"
+                  alt="Nexa"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-3xl"
+                />
+              </div>
+            </Link>
+        
+            <Link href={"projects/entise"}>
+              <div className="img img-1 w-[60vw] h-[60vh] relative">
+                <Image
+                  src="/images/good.jpg"
+                  alt="Good"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-3xl"
+                />
+              </div>
+            </Link>
+            <Link href={"#"}>
+              <div className="img img-2 w-[60vw] h-[60vh] relative">
+                <Image
+                  src="/images/b2.jpg"
+                  alt="B2"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-3xl"
+                />
+              </div>
+            </Link>
+          </div>
           <section className="w-[30vw] flex justify-around items-center"></section>
         </div>
       </div>

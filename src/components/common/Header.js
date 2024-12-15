@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Menu from "@/components/common/Menu";
+import Image from "next/image";
+import MenuIcon from "/public/MenuIcon.svg"
 
 const Header = () => {
   const pathname = usePathname();
@@ -72,8 +74,8 @@ const Header = () => {
           className="flex p-2"
           onClick={toggleMenu}
         >
-          <img
-            src="/MenuIcon.svg"
+          <Image
+            src={MenuIcon}
             alt="Menu"
             className="w-full rounded-lg items-center justify-center"
           />

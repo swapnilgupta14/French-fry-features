@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import RotatingText from "@/components/common/RotatingText";
 import Image from "next/image";
+import DownArrow from "/public/DownArrow.svg"
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -21,8 +22,8 @@ const Hero = () => {
 
           <span className="flex items-center ">
             <div className=" inset-0 flex items-center justify-center z-10 hover:cursor-pointer bg-white border-2 border-gray-700 h-20 w-20 rounded-full">
-              <img
-                src="/DownArrow.svg"
+              <Image
+                src={DownArrow}
                 alt="North East Arrow"
               />
             </div>

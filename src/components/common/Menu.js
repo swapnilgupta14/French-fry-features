@@ -1,7 +1,13 @@
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 import Button from "@/components/common/Button";
+
+import RoundedPlus from "/public/RoundedPlus.svg";
+import CloseIcon from "/public/CloseIcon.svg";
+import NEArrowIcon from "/public/NE Arrow Icon.svg";
+import MenuImage from "/public/menu.png";
 
 const Menu = ({ toggleMenu }) => {
   const menuRef = useRef(null);
@@ -14,7 +20,6 @@ const Menu = ({ toggleMenu }) => {
     { label: "Home", link: "/" },
     { label: "About Us", link: "/whoarewe" },
     { label: "Projects", link: "/Projects" },
-    // { label: "Our Services", link: "#" },
     { label: "Contact Us", link: "/connect" },
   ];
 
@@ -137,7 +142,7 @@ const Menu = ({ toggleMenu }) => {
       ref={menuRef}
     >
       <div className="flex justify-between items-center px-9">
-        <div className="text-white text-2xl font-bold">Frencg Fry Features</div>
+        <div className="text-white text-2xl font-bold">French Fry Features</div>
         <div className="flex justify-center items-center space-x-3">
           <Button
             bgColor="bg-white"
@@ -147,9 +152,9 @@ const Menu = ({ toggleMenu }) => {
             label={
               <span className="flex justify-center items-center gap-2">
                 <span className="inline-block">
-                  <img
-                    src="/RoundedPlus.svg"
-                    alt="laptop"
+                  <Image
+                    src={RoundedPlus}
+                    alt="Rounded Plus"
                     className="w-fit rounded-full"
                   />
                 </span>
@@ -157,29 +162,27 @@ const Menu = ({ toggleMenu }) => {
               </span>
             }
           />
-          {/* <button className="bg-white text-fontColor px-4 py-2 rounded-full flex items-center space-x-2"></button> */}
           <button
             className="bg-white text-fontColor rounded-full flex items-center space-x-2"
             onClick={handleClose}
           >
-            <img
-              src="/CloseIcon.svg"
-              alt="close icon"
+            <Image
+              src={CloseIcon}
+              alt="Close icon"
               className="w-fit rounded-full transform transition-transform duration-500 hover:rotate-180"
             />
           </button>
         </div>
       </div>
 
-      <div className="flex flex-1 gap-10 items-end px-5 ">
+      <div className="flex flex-1 gap-10 items-end px-5">
         <div
           className="flex-1 flex flex-col justify-end m-5 custom-font"
           ref={leftSectionRef}
         >
           {menuLinks.map((item, index) => (
-            <Link href={item?.link}>
+            <Link href={item?.link} key={index}>
               <div
-                key={index}
                 ref={(el) => (linksRef.current[index] = el)}
                 className={`text-white font-semibold flex items-center justify-between pb-6 ${
                   index !== menuLinks.length - 1
@@ -196,10 +199,9 @@ const Menu = ({ toggleMenu }) => {
                       {item.label}
                     </span>
                   </div>
-
-                  <img
-                    src="/NE Arrow Icon.svg"
-                    alt="laptop"
+                  <Image
+                    src={NEArrowIcon}
+                    alt="Arrow icon"
                     className="w-fit rounded-full transition-transform duration-300 hover:rotate-180 hover:cursor-pointer"
                   />
                 </p>
@@ -214,9 +216,9 @@ const Menu = ({ toggleMenu }) => {
         >
           <div className="p-2">
             <div className="relative">
-              <img
-                src="/menu.png"
-                alt="laptop"
+              <Image
+                src={MenuImage}
+                alt="Menu"
                 className="w-full rounded-lg mb-4 transition-transform duration-500 hover:scale-105"
               />
             </div>
