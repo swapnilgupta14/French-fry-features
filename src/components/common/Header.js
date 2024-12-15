@@ -24,10 +24,10 @@ const Header = () => {
       label: "Projects",
       link: "/Projects",
     },
-    {
-      label: "Services",
-      link: "#",
-    },
+    // {
+    //   label: "Services",
+    //   link: "#",
+    // },
     {
       label: "Contact",
       link: "/connect",

@@ -4,11 +4,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 const servicesData = [
-  { name: "Web Apps", mediaType: "image", src: "/images/Potrait/P1.png" },
-  { name: "B2B Websites", mediaType: "image", src: "/images/Potrait/P2.png" },
-  { name: "UI/UX Designing", mediaType: "image", src: "/images/Potrait/P3.png" },
-  { name: "Shopify", mediaType: "image", src: "/images/Potrait/P6.png" },
-  { name: "Framer", mediaType: "image", src: "/images/Potrait/P7.png" },
+  { name: "Web Apps", mediaType: "image", src: "/images/S1.jpg" },
+  { name: "B2B Websites", mediaType: "image", src: "/images/S2.jpg" },
+  { name: "UI/UX Designing", mediaType: "image", src: "/images/S3.jpg" },
+  { name: "Shopify", mediaType: "image", src: "/images/S1.jpg" },
+  { name: "Framer", mediaType: "image", src: "/images/S2.jpg" },
 ];
 
 const Services = () => {
