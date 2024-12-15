@@ -2,13 +2,14 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 const servicesData = [
-  { name: "Web Apps", mediaType: "image", src: "/images/S1.jpg" },
-  { name: "B2B Websites", mediaType: "image", src: "/images/S2.jpg" },
-  { name: "UI/UX Designing", mediaType: "image", src: "/images/S3.jpg" },
-  { name: "Shopify", mediaType: "image", src: "/images/S1.jpg" },
-  { name: "Framer", mediaType: "image", src: "/images/S2.jpg" },
+  { name: "Web Apps", mediaType: "image", src: "/images/S1.jpg", link: "/projects/nexabet" },
+  { name: "B2B Websites", mediaType: "image", src: "/images/S2.jpg", link: "/projects/jai-multi"},
+  { name: "UI/UX Designing", mediaType: "image", src: "/images/S3.jpg", link: "/projects/kainath" },
+  { name: "Shopify", mediaType: "image", src: "/images/S1.jpg", link: "/projects/entise" },
+  { name: "Framer", mediaType: "image", src: "/images/S2.jpg", link: "/projects/portfolio" },
 ];
 
 const Services = () => {
@@ -100,24 +101,26 @@ const Services = () => {
       <div className="w-[55%] h-screen px-20 py-10 flex items-center justify-center ">
         <ul className="mt-8 z-20 p-5 w-full">
           {servicesData.map((service, index) => (
-            <li
-              key={index}
-              ref={(el) => (serviceRef.current[index] = el)}
-              className={`cursor-pointer font-medium text-fontColor hover:text-accent overflow-hidden custom-font ${
-                currentService.name === service.name && "text-accent"
-              }`}
-              onMouseEnter={() => handleHover(service)}
-            >
-              <div className="group relative cursor-pointer text-[4.2rem] leading-[5rem]">
-                <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[140%] ">
-                  {service.name}
-                  <span className="text-[1rem] mx-3">(0{index + 1})</span>
-                </span>
-                <span className="absolute left-0 translate-y-[200%] rotate-12 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
-                  {service.name}
-                </span>
-              </div>
-            </li>
+            <Link href={service.link}>
+              <li
+                key={index}
+                ref={(el) => (serviceRef.current[index] = el)}
+                className={`cursor-pointer font-medium text-fontColor hover:text-accent overflow-hidden custom-font ${
+                  currentService.name === service.name && "text-accent"
+                }`}
+                onMouseEnter={() => handleHover(service)}
+              >
+                <div className="group relative cursor-pointer text-[4.2rem] leading-[5rem]">
+                  <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[140%] ">
+                    {service.name}
+                    <span className="text-[1rem] mx-3">(0{index + 1})</span>
+                  </span>
+                  <span className="absolute left-0 translate-y-[200%] rotate-12 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
+                    {service.name}
+                  </span>
+                </div>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>

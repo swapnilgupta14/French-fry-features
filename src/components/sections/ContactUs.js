@@ -11,6 +11,7 @@ import {
   FaPhone,
   FaInstagram,
 } from "react-icons/fa";
+import { Contact, ContactIcon, Mail } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,7 +61,6 @@ const ContactUs = () => {
       { y: 30, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power3.out", stagger: 0.2 }
     );
-    
 
     gsap.utils.toArray(".contact-buttons").forEach((container) => {
       const buttonTimeline = gsap.timeline({
@@ -164,16 +164,29 @@ const ContactUs = () => {
           something amazing together!
         </p>
         <div className="z-10 flex gap-3 contact-buttons section-1">
-          <Button className="contact-button" label="E-mail Us" />
-          <Button className="contact-button" label={<FaWhatsapp size={18} />} />
-          <Button
-            className="contact-button"
-            label={<FaTelegramPlane size={18} />}
-          />
-          <Button
-            className="contact-button"
-            label={<FaInstagram size={18} />}
-          />
+          <button
+            className=" bg-black text-white font-medium rounded-xl py-2 px-3 flex gap-2 items-center justify-center"
+            label="E-mail Us"
+            onClick={() =>
+              (window.location.href = "mailto:krish@frenchfryfeatures.com")
+            }
+          >
+            Email <Mail size={18} />
+          </button>
+
+          <button
+            className=" bg-black text-white font-medium rounded-xl py-2 px-3 flex gap-2 items-center justify-center"
+            onClick={() => (window.location.href = "https://wa.me/8799111110")}
+          >
+            <FaWhatsapp size={18} />
+          </button>
+
+          <button
+            className=" bg-black text-white font-medium rounded-xl py-2 px-3 flex gap-2 items-center justify-center"
+            onClick={() => (window.location.href = "/connect")}
+          >
+            <ContactIcon size={20} />
+          </button>
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const ThreeSectionComponent = () => {
         <div className="flex justify-center items-center h-full text-white text-2xl font-bold">
           <img
             className="h-full w-full object-cover"
-            src="/images/banner-1.png"
+            src="/images/CTA2.jpg"
           />
         </div>
       </div>
@@ -54,7 +54,7 @@ const ThreeSectionComponent = () => {
         <div className="flex justify-center items-center h-full text-white text-2xl font-bold">
           <img
             className="h-full w-full object-cover"
-            src="/images/banner-4.png"
+            src="/images/CTA3.jpg"
           />
         </div>
       </div>
@@ -68,7 +68,7 @@ const ThreeSectionComponent = () => {
         <div className="flex justify-center items-center h-full text-white text-2xl font-bold">
           <img
             className="h-full w-full object-cover"
-            src="/images/banner-3.png"
+            src="/images/CTA1.jpg"
           />
         </div>
       </div>

@@ -14,7 +14,7 @@ const Menu = ({ toggleMenu }) => {
     { label: "Home", link: "/" },
     { label: "About Us", link: "/whoarewe" },
     { label: "Projects", link: "/Projects" },
-    { label: "Our Services", link: "#" },
+    // { label: "Our Services", link: "#" },
     { label: "Contact Us", link: "/connect" },
   ];
 
