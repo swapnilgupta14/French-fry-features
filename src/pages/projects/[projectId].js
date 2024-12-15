@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/common/Header";
-import { projectDetails } from "../ProjectData";
+import { projectDetails } from "../../data/ProjectData";
 import { ArrowLeft } from "lucide-react";
 
 export default function ProjectDetail({ project }) {

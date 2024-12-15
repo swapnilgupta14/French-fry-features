@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/common/Header";
-import { projectDetails } from "./ProjectData";
+import { projectDetails } from "../data/ProjectData";
 
 export default function Projects() {
   const projectData = Object.values(projectDetails);
