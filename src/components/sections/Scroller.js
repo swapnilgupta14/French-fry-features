@@ -48,19 +48,19 @@ const Scroller = () => {
           <section className="w-[100vw] flex justify-around items-end py-10 ">
             <div className="img img-1 w-[30vw] h-[70vh]">
               <img
-                src="/images/b2.jpg"
+                src="/images/aucto4.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-2 w-[30vw] h-[70vh]">
               <img
-                src="/images/b1.jpg"
+                src="/images/nexa.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
             <div className="img img-3 w-[30vw] h-[70vh]">
               <img
-                src="/images/b3.jpg"
+                src="/images/rummy2.png"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
@@ -69,7 +69,7 @@ const Scroller = () => {
           <section className="w-[100vw] flex justify-around items-end py-10">
             <div className="img img-1 w-[30vw] h-[70vh]">
               <img
-                src="/images/b1.jpg"
+                src="/images/kain2.png"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>
@@ -81,7 +81,7 @@ const Scroller = () => {
             </div>
             <div className="img img-3 w-[30vw] h-[70vh]">
               <img
-                src="/images/b3.jpg"
+                src="/images/entise3.jpg"
                 className="w-full h-full object-cover rounded-3xl"
               />
             </div>

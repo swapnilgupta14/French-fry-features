@@ -12,10 +12,10 @@ const Menu = ({ toggleMenu }) => {
 
   const menuLinks = [
     { label: "Home", link: "/" },
-    { label: "About Us", link: "#" },
+    { label: "About Us", link: "/whoarewe" },
     { label: "Projects", link: "/Projects" },
     { label: "Our Services", link: "#" },
-    { label: "Contact Us", link: "#" },
+    { label: "Contact Us", link: "/connect" },
   ];
 
   useEffect(() => {
@@ -143,6 +143,7 @@ const Menu = ({ toggleMenu }) => {
             bgColor="bg-white"
             textColor="text-black"
             flairColor="bg-gray-400"
+            path="/connect"
             label={
               <span className="flex justify-center items-center gap-2">
                 <span className="inline-block">

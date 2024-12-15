@@ -18,7 +18,7 @@ const Header = () => {
     },
     {
       label: "About",
-      link: "#",
+      link: "/whoarewe",
     },
     {
       label: "Projects",
@@ -30,7 +30,7 @@ const Header = () => {
     },
     {
       label: "Contact",
-      link: "#",
+      link: "/connect",
     },
   ];
 
@@ -44,12 +44,11 @@ const Header = () => {
         </div>
         <nav className="hidden md:visible lg:visible md:flex lg:flex text-sm bg-white rounded-full py-1 m-2 border-1 border-accent aria-hidden:true z-20">
           {navLinks.map((item) => {
-            // Check if the current pathname matches the link
-            // For home route, do an exact match, for others use startsWith
-            const isActive = 
-              item.link === '/' 
-                ? pathname === item.link 
-                : pathname.startsWith(item.link);
+            const isActive =
+              item.link === "/"
+                ? pathname === item.link
+                : pathname.startsWith(item.link) ||
+                  (item.label === "Projects" && pathname.includes("projects"));
 
             return (
               <Link
@@ -68,9 +67,9 @@ const Header = () => {
           })}
         </nav>
 
-        <button 
-          aria-label="Toggle Menu" 
-          className="flex p-2" 
+        <button
+          aria-label="Toggle Menu"
+          className="flex p-2"
           onClick={toggleMenu}
         >
           <img

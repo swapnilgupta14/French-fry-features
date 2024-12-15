@@ -4,11 +4,15 @@ import Link from "next/link";
 import Header from "@/components/common/Header";
 import { projectDetails } from "../../data/ProjectData";
 import { ArrowLeft } from "lucide-react";
+import UseLenis from "@/utils/customHooks/UseLenis";
 
 export default function ProjectDetail({ project }) {
+
   if (!project) {
     return <div>Project Not Found</div>;
   }
+
+  UseLenis();
 
   return (
     <section className="w-full flex flex-col items-center justify-center gap-2 overflow-hidden">
@@ -31,7 +35,7 @@ export default function ProjectDetail({ project }) {
 
           <div className="w-full h-[60vh] overflow-hidden rounded-xl mt-8">
             <Image
-              src={project.imageFiles[0]}
+              src={project.imageFilesHero.url}
               alt={project.name}
               width={1200}
               height={800}
@@ -106,14 +110,15 @@ export default function ProjectDetail({ project }) {
                 className="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl"
               >
                 <Image
-                  src={image}
+                  src={image.url}
                   alt={`${project.name} - Image ${index + 1}`}
                   width={600}
                   height={400}
                   className="object-cover w-full h-full hover:scale-110 transition-transform"
                 />
               </div>
-            ))}
+            )
+            )}
           </div>
         </div>
 

@@ -3,9 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/common/Header";
 import { projectDetails } from "../data/ProjectData";
+import UseLenis from "@/utils/customHooks/UseLenis";
 
 export default function Projects() {
   const projectData = Object.values(projectDetails);
+  UseLenis();
 
   return (
     <section className="w-full flex flex-col items-center justify-center gap-2 overflow-hidden">
@@ -28,7 +30,7 @@ export default function Projects() {
             
             <div className="flex flex-col items-center justify-center p-10 mt-[-3.2rem] rounded-xl w-[60vw] h-[60vh] overflow-hidden">
               <Image
-                src={project.imageFiles[0]}
+                src={project.imageFilesHero.url}
                 alt={project.label}
                 width={1000}
                 height={800}
