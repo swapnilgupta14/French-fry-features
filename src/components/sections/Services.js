@@ -5,11 +5,11 @@ import { gsap } from "gsap";
 import Link from "next/link";
 
 const servicesData = [
-  { name: "Web Apps", mediaType: "image", src: "/images/S1.jpg", link: "/projects/nexabet" },
-  { name: "B2B Websites", mediaType: "image", src: "/images/S2.jpg", link: "/projects/jai-multi"},
-  { name: "UI/UX Designing", mediaType: "image", src: "/images/S3.jpg", link: "/projects/kainath" },
-  { name: "Shopify", mediaType: "image", src: "/images/S1.jpg", link: "/projects/entise" },
-  { name: "Framer", mediaType: "image", src: "/images/S2.jpg", link: "/projects/portfolio" },
+  { name: "Web Apps", mediaType: "image", src: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734313503/S3_t9eznq.jpg", link: "/projects/nexabet" },
+  { name: "B2B Websites", mediaType: "image", src: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734313504/S2_thmmbl.jpg", link: "/projects/jai-multi"},
+  { name: "UI/UX Designing", mediaType: "image", src: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734313504/S1_lhufet.jpg", link: "/projects/kainath" },
+  { name: "Shopify", mediaType: "image", src: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734313503/S3_t9eznq.jpg", link: "/projects/entise" },
+  { name: "Framer", mediaType: "image", src: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734313504/S2_thmmbl.jpg", link: "/projects/portfolio" },
 ];
 
 const Services = () => {

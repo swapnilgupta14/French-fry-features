@@ -106,14 +106,14 @@ const ContactUs = () => {
           loop
           playsInline
         >
-          <source src="/videos/videos1.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dml6gxfmn/video/upload/v1734313698/videos1_r2lzed.mp4" type="video/mp4" />
         </video>
       </div>
 
       <div className="flex items-center absolute bottom-[22vh] right-[24vw] z-10 hover:cursor-pointer">
         <RotatingText
           text="Crafting Brands • Design Excellence • Innovation •"
-          imageSrc="/NE Arrow Icon.svg"
+          imageSrc="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734314237/NE_Arrow_Icon_dlskzh.svg"
         />
       </div>
 

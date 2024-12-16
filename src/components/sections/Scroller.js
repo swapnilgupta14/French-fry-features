@@ -54,7 +54,7 @@ const Scroller = () => {
             <Link href={"/projects/entise"}>
               <div className="img img-1 w-[60vw] h-[60vh] relative">
                 <Image
-                  src="/images/entise3.jpg"
+                  src="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312312/entise_ypstw3.jpg"
                   alt="Entise"
                   layout="fill"
                   objectFit="cover"
@@ -62,11 +62,24 @@ const Scroller = () => {
                 />
               </div>
             </Link>
-            <Link href={"projects/nexa"}>
+
+            <Link href={"/projects/jai-multi"}>
               <div className="img img-2 w-[60vw] h-[60vh] relative">
                 <Image
-                  src="/images/nexa.jpg"
-                  alt="Nexa"
+                  src="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312172/jai_tlbmvs.jpg"
+                  alt="Jai-multi"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-3xl"
+                />
+              </div>
+            </Link>
+            
+            <Link href={"/projects/portfolio"}>
+              <div className="img img-2 w-[60vw] h-[60vh] relative">
+                <Image
+                  src="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg"
+                  alt="B2"
                   layout="fill"
                   objectFit="cover"
                   className="rounded-3xl"
@@ -77,7 +90,7 @@ const Scroller = () => {
             <Link href={"projects/entise"}>
               <div className="img img-1 w-[60vw] h-[60vh] relative">
                 <Image
-                  src="/images/good.jpg"
+                  src="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312729/good2_q6yj67.jpg"
                   alt="Good"
                   layout="fill"
                   objectFit="cover"
@@ -85,17 +98,10 @@ const Scroller = () => {
                 />
               </div>
             </Link>
-            <Link href={"#"}>
-              <div className="img img-2 w-[60vw] h-[60vh] relative">
-                <Image
-                  src="/images/b2.jpg"
-                  alt="B2"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-3xl"
-                />
-              </div>
-            </Link>
+
+           
+
+            
           </div>
           <section className="w-[30vw] flex justify-around items-center"></section>
         </div>
