@@ -13,11 +13,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-accent text-white h-screen flex flex-col justify-between z-20">
-      <div className="w-full bg-white rounded-r-3xl ">
-
-      </div>
-      <div className=" flex-1 container flex flex-col items-end px-6 md:flex-col justify-between -mb-20">
+    <footer className="relative bg-accent text-white h-fit flex flex-col justify-between z-20">
+      <div className="w-full bg-white rounded-r-3xl "></div>
+      {/* <div className=" flex-1 container flex flex-col items-end px-6 md:flex-col justify-between -mb-20">
         <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-40 w-full">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="text-center md:text-left mb-8 md:mb-0">
@@ -45,13 +43,15 @@ export default function Footer() {
           <FaRss className="hover:text-gray-400 cursor-pointer" />
         </div>
 
-        <div className="text-center text-white text-sm p-4 rounded-md  w-full">
-          © 2024 French Fry Features. All rights reserved.
-        </div>
+       
+      </div> */}
+      <div className="text-center text-white text-sm p-4 rounded-md  w-full">
+        © 2024 French Fry Features. All rights reserved.
       </div>
-
       <div className="relative font-bold h-[25em] w-full  -mb-10">
-        <p className="w-full text-center text-[19em] text-white custom-font">FRENCH FRY</p>
+        <p className="w-full text-center text-[19em] text-white custom-font">
+          FRENCH FRY
+        </p>
       </div>
     </footer>
   );

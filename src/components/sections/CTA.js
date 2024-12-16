@@ -33,21 +33,18 @@ const ThreeSectionComponent = () => {
 
   return (
     <div className="flex h-screen justify-between bg-gray-300">
-      {/* First Section - Services */}
       <div
         ref={sectionRefs[0]}
         className="relative bg-gray-200 h-full cursor-pointer transition-all duration-600 z-20 overflow-hidden"
         onMouseEnter={() => setHovered(0)}
         onMouseLeave={() => setHovered(null)}
       >
-        {/* Background Image with Blur */}
         <img
           className="absolute inset-0 w-full h-full object-cover filter blur-sm scale-110"
           src="/images/CTA2.jpg"
           alt="Services Background"
         />
 
-        {/* Overlay Content */}
         <div className="relative z-10 flex flex-col justify-center items-start p-12 lg:p-16 xl:p-20 text-white h-full bg-black bg-opacity-40">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
             Our Creative Services
@@ -81,7 +78,6 @@ const ThreeSectionComponent = () => {
           alt="Work With Us Background"
         />
 
-        {/* Overlay Content */}
         <div className="relative z-10 flex flex-col justify-center items-start p-12 lg:p-16 xl:p-20 text-white h-full bg-black bg-opacity-40">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
             Let's Collaborate
@@ -103,21 +99,18 @@ const ThreeSectionComponent = () => {
         </div>
       </div>
 
-      {/* Third Section - CTA */}
       <div
         ref={sectionRefs[2]}
         className="relative bg-gray-400 h-full cursor-pointer transition-all duration-600 overflow-hidden"
         onMouseEnter={() => setHovered(2)}
         onMouseLeave={() => setHovered(null)}
       >
-        {/* Background Image with Blur */}
         <img
           className="absolute inset-0 w-full h-full object-cover filter blur-sm scale-110"
           src="/images/CTA1.jpg"
           alt="CTA Background"
         />
 
-        {/* Overlay Content */}
         <div className="relative z-10 flex flex-col justify-center items-start p-12 lg:p-16 xl:p-20 text-white h-full bg-black bg-opacity-40">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
             Elevate Your Brand
