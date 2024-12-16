@@ -8,13 +8,13 @@ export const projectDetails = {
     type: "Web Development",
     tech: "React, Vercel",
     link: "https://jai-multi.vercel.app/",
-    imageFilesHero: { url: "/images/jai.jpg", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312172/jai_tlbmvs.jpg", type: "desktop" },
 
     imageFiles: [
-      { url: "/images/jai.jpg", type: "desktop" },
-      { url: "/images/jai1.jpg", type: "desktop" },
-      { url: "/images/jai2.jpg", type: "desktop" },
-      { url: "/images/jai3.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312172/jai_tlbmvs.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312173/jai2_wcokl7.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312172/jai1_jfpnmr.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312174/jai3_sxgqju.jpg", type: "desktop" },
     ],
     keyFeatures: ["Homepage", "About Us", "Product Section", "Contact Page"],
     designProcess: [
@@ -32,12 +32,12 @@ export const projectDetails = {
     type: "E-commerce Development",
     tech: "Shopify",
     link: "https://entise.in/",
-    imageFilesHero: { url: "/images/entise.jpg", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312316/entise3_qcuvny.jpg", type: "desktop" },
 
     imageFiles: [
-      { url: "/images/entise3.jpg", type: "desktop" },
-      { url: "/images/entise1.jpg", type: "desktop" },
-      { url: "/images/entise2.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312316/entise3_qcuvny.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312314/entise2_b0wgsl.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312313/entise1_jen0wg.jpg", type: "desktop" },
     ],
     keyFeatures: ["Homepage", "Product Page", "Return and Refund Policy"],
     designProcess: [
@@ -55,11 +55,11 @@ export const projectDetails = {
     type: "No Code",
     tech: "Framer",
     link: "https://nisargspace.framer.website",
-    imageFilesHero: { url: "/images/framer1.jpg", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg", type: "desktop" },
     imageFiles: [
-      { url: "/images/framer2.jpg", type: "desktop" },
-      { url: "/images/framer3.jpg", type: "desktop" },
-      { url: "/images/framer1.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312321/framer3_kfpb5p.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312320/framer2_j3cllx.jpg", type: "desktop" },
     ],
     keyFeatures: [
       "Framer Animation",
@@ -76,13 +76,13 @@ export const projectDetails = {
     type: "E-commerce Development",
     tech: "Shopify",
     link: "#",
-    imageFilesHero: { url: "/images/good.jpg", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312729/good2_q6yj67.jpg", type: "desktop" },
 
     imageFiles: [
-      { url: "/images/good1.jpg", type: "desktop" },
-      { url: "/images/good2.jpg", type: "desktop" },
-      { url: "/images/good3.jpg", type: "desktop" },
-      { url: "/images/good4.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312729/good2_q6yj67.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312728/good1_azymot.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312734/good4_itorvl.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312733/good3_d4lunn.jpg", type: "desktop" },
     ],
     keyFeatures: ["Homepage", "Product Listing Page", "About Us"],
     designProcess: [
@@ -100,14 +100,13 @@ export const projectDetails = {
     type: "Web Development",
     tech: "Hono, React, Figma, Express.js, Redis",
     link: "https://aucto-games-app.vercel.app/",
-    imageFilesHero: { url: "/images/auctoDash.png", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311725/auctoDash_fckaqa.png", type: "desktop" },
     imageFiles: [
-      { url: "/images/aucto0.jpg", type: "mobile" },
-      { url: "/images/aucto1.jpg", type: "mobile" },
-      { url: "/images/aucto2.jpg", type: "mobile" },
-      { url: "/images/aucto3.jpg", type: "mobile" },
-      { url: "/images/aucto4.jpg", type: "mobile" },
-      { url: "/images/aucto5.jpg", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311722/aucto4_rh62jh.jpg", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311722/aucto5_bgeqfl.jpg", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311721/aucto3_il159d.jpg", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311719/aucto2_x56lld.jpg", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311718/aucto1_ctjbx5.jpg", type: "mobile" },
     ],
     keyFeatures: [
       "Player Bidding",
@@ -127,12 +126,12 @@ export const projectDetails = {
     type: "UI/UX Designing",
     tech: "Figma",
     link: "#",
-    imageFilesHero: { url: "/images/rummy.png", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312593/rummy4_vwvtbb.png", type: "desktop" },
 
     imageFiles: [
-      { url: "/images/rummy1.png", type: "mobile" },
-      { url: "/images/rummy2.png", type: "mobile" },
-      { url: "/images/rummy3.png", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312591/rummy2_am9w7l.png", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312588/rummy1_vzak1m.png", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312592/rummy3_tncmn6.png", type: "mobile" },
     ],
     keyFeatures: [
       "Splash Screen",
@@ -158,14 +157,13 @@ export const projectDetails = {
     type: "UI/UX Designing",
     tech: "Figma",
     link: "#",
-    imageFilesHero: { url: "/images/kain.png", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312457/kain_fnixp5.png", type: "desktop" },
 
     imageFiles: [
-      { url: "/images/kain.png", type: "desktop" },
-      { url: "/images/kain1.png", type: "mobile" },
-      { url: "/images/kain2.png", type: "mobile" },
-      { url: "/images/kain3.png", type: "mobile" },
-      { url: "/images/kain4.png", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312460/kain2_dzhvg0.png", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312458/kain1_dzmmbz.png", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312461/kain3_trfxtw.png", type: "mobile" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312463/kain4_sujael.png", type: "mobile" },
     ],
     keyFeatures: [
       "5-Minute Timed Chat",
@@ -190,13 +188,13 @@ export const projectDetails = {
     type: "Web Development",
     tech: "React, Node.js",
     link: "#",
-    imageFilesHero: { url: "/images/nexa.jpg", type: "desktop" },
+    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311593/nexa_faomlf.jpg", type: "desktop" },
     imageFiles: [
-      { url: "/images/nexa.jpg", type: "desktop" },
-      { url: "/images/nexa2.jpg", type: "desktop" },
-      { url: "/images/nexa1.jpg", type: "desktop" },
-      { url: "/images/nexa3.jpg", type: "desktop" },
-      { url: "/images/nexa4.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311593/nexa_faomlf.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311593/nexa2_sfohtf.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311593/nexa1_xhoooi.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311594/nexa4_p6gatm.jpg", type: "desktop" },
+      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734311594/nexa3_evwlkb.jpg", type: "desktop" },
     ],
     keyFeatures: ["Real-Time Odds", "User Wallet Management", "Bet History"],
 
