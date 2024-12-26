@@ -83,7 +83,9 @@ export default function Projects() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden flex flex-col">
-      <Header className="fixed top-0 w-full z-50 pr-[24px]" />
+      <div className="pr-4">
+        <Header className="fixed top-0 w-full z-50" />
+      </div>
 
       <div className="w-full flex-1 flex">
         <div className="w-1/4 fixed left-0 h-[calc(100vh-64px)] p-8 overflow-y-auto flex flex-col justify-center">
@@ -129,7 +131,7 @@ export default function Projects() {
 
         <div
           ref={rightSectionRef}
-          className="w-3/4 ml-[25%] h-[calc(100vh-100px)] rounded-2xl overflow-y-auto scroll-smooth bg-black/10 mt-6"
+          className="w-3/4 ml-[25%] h-[calc(100vh-100px)] rounded-2xl overflow-y-auto scroll-smooth bg-white mt-6"
         >
           {projectData.map((project) => (
             <div
@@ -157,7 +159,7 @@ export default function Projects() {
                 </div>
 
                 <div className="space-y-4">
-                  <h2 className="text-3xl custom-font">{project.name}</h2>
+                  <h2 className="text-4xl custom-font">{project.name}</h2>
                   <div className="flex items-center space-x-4">
                     <span className="px-4 py-1 border-2 border-accent rounded-full text-accent">
                       {project.type}
