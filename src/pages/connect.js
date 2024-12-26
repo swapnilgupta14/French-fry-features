@@ -23,30 +23,6 @@ const Connect = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .send(
-        "service_vblr2zy", 
-        "template_y74rzcv",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_email: "mail.swapnilgupta@gmail.com",
-        },
-        "ZjT8QZD58D07ZtrNw" 
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-  };
-
   return (
     <div>
       <Header />
@@ -72,7 +48,7 @@ const Connect = () => {
             </div>
           )}
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6">
             <input
               type="text"
               name="name"

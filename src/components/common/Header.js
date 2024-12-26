@@ -76,7 +76,7 @@ const Header = () => {
         <div className="w-1/3 flex items-center justify-end">
           <button
             aria-label="Toggle Menu"
-            className="flex p-2"
+            className="flex p-2 z-40"
             onClick={toggleMenu}
           >
             <Image

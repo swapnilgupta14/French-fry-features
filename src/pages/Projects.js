@@ -131,7 +131,7 @@ export default function Projects() {
 
         <div
           ref={rightSectionRef}
-          className="w-3/4 ml-[25%] h-[calc(100vh-100px)] rounded-2xl overflow-y-auto scroll-smooth bg-white mt-6"
+          className="w-3/4 ml-[25%] h-[calc(100vh-100px)] rounded-2xl overflow-y-auto scroll-smooth bg-white mt-6 shadow-2xl"
         >
           {projectData.map((project) => (
             <div
