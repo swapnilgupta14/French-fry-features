@@ -18,25 +18,25 @@ const Services = () => {
   const imageContainerRef = useRef(null);
   const circleRef = useRef(null);
 
-  useEffect(() => {
-    const rect = imageContainerRef.current.getBoundingClientRect();
-    gsap.set(circleRef.current, {
-      x: rect.width - circleRef.current.offsetWidth - 280,
-      y: rect.height - circleRef.current.offsetHeight - 270,
-    });
-  }, []);
+  // useEffect(() => {
+  //   const rect = imageContainerRef.current.getBoundingClientRect();
+  //   gsap.set(circleRef.current, {
+  //     x: rect.width - circleRef.current.offsetWidth - 280,
+  //     y: rect.height - circleRef.current.offsetHeight - 270,
+  //   });
+  // }, []);
 
-  const handleMouseMove = (e) => {
-    const x = e.clientX - 390;
-    const y = e.clientY - 410;
+  // const handleMouseMove = (e) => {
+  //   const x = e.clientX - 390;
+  //   const y = e.clientY - 410;
 
-    gsap.to(circleRef.current, {
-      x: x - circleRef.current.offsetWidth / 2,
-      y: y - circleRef.current.offsetHeight / 2,
-      duration: 1,
-      ease: "power2.out",
-    });
-  };
+  //   gsap.to(circleRef.current, {
+  //     x: x - circleRef.current.offsetWidth / 2,
+  //     y: y - circleRef.current.offsetHeight / 2,
+  //     duration: 1,
+  //     ease: "power2.out",
+  //   });
+  // };
 
   const handleHover = (service) => {
     gsap.to(imageContainerRef.current, {
@@ -66,7 +66,7 @@ const Services = () => {
         <div
           className="relative flex items-center justify-center w-[80%] h-[80%] object-cover overflow-hidden rounded-3xl shadow-lg hover:cursor-pointer"
           ref={imageContainerRef}
-          onMouseMove={handleMouseMove}
+          // onMouseMove={handleMouseMove}
         >
           {currentService.mediaType === "image" ? (
             <Image
@@ -88,13 +88,13 @@ const Services = () => {
               height={600}
             />
           )}
-          <div
+          {/* <div
             ref={circleRef}
             className="absolute w-20 h-20 text-sm rounded-full bg-black text-white flex items-center justify-center pointer-events-none"
           >
             Know <br />
             More
-          </div>
+          </div> */}
         </div>
       </div>
 

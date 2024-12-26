@@ -46,27 +46,27 @@ export const projectDetails = {
       "SEO Optimization",
     ],
   },
-  "Portfolio Website": {
-    id: "portfolio",
-    name: "Portfolio Website",
-    label: "Web App Framer",
-    description:
-      "We curated a portfolio website built on Framer to highlight design skills and technical capabilities. Featuring smooth animations, clean aesthetics, and an intuitive layout, it showcases a modern approach to creating engaging digital experiences.",
-    type: "No Code",
-    tech: "Framer",
-    link: "https://nisargspace.framer.website",
-    imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg", type: "desktop" },
-    imageFiles: [
-      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg", type: "desktop" },
-      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312321/framer3_kfpb5p.jpg", type: "desktop" },
-      { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312320/framer2_j3cllx.jpg", type: "desktop" },
-    ],
-    keyFeatures: [
-      "Framer Animation",
-      "Modern Design",
-    ],
-    designProcess: ["Prototyping", "UI Design", "Development"],
-  },
+  // "Portfolio Website": {
+  //   id: "portfolio",
+  //   name: "Portfolio Website",
+  //   label: "Web App Framer",
+  //   description:
+  //     "We curated a portfolio website built on Framer to highlight design skills and technical capabilities. Featuring smooth animations, clean aesthetics, and an intuitive layout, it showcases a modern approach to creating engaging digital experiences.",
+  //   type: "No Code",
+  //   tech: "Framer",
+  //   link: "https://nisargspace.framer.website",
+  //   imageFilesHero: { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg", type: "desktop" },
+  //   imageFiles: [
+  //     { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg", type: "desktop" },
+  //     { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312321/framer3_kfpb5p.jpg", type: "desktop" },
+  //     { url: "https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312320/framer2_j3cllx.jpg", type: "desktop" },
+  //   ],
+  //   keyFeatures: [
+  //     "Framer Animation",
+  //     "Modern Design",
+  //   ],
+  //   designProcess: ["Prototyping", "UI Design", "Development"],
+  // },
   "The Good Planet": {
     id: "good-planet",
     name: "The Good Planet",

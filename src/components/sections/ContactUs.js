@@ -95,10 +95,11 @@ const ContactUs = () => {
       <div className="absolute bottom-0 right-0 z-0 overflow-visible">
         <div
           ref={blobRef}
-          className="z-0 w-[700px] h-[700px] rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 opacity-30 blur-3xl gradient-blob"
+          className="z-0 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 opacity-30 blur-3xl gradient-blob"
         ></div>
       </div>
-      <div className="absolute bottom-20 right-20 w-[23rem] hover:cursor-pointer">
+
+      <div className="absolute bottom-28 right-20 w-[23rem] hover:cursor-pointer">
         <video
           ref={videoRef}
           className="object-cover rounded-xl"
@@ -106,15 +107,18 @@ const ContactUs = () => {
           loop
           playsInline
         >
-          <source src="https://res.cloudinary.com/dml6gxfmn/video/upload/v1734313698/videos1_r2lzed.mp4" type="video/mp4" />
+          <source
+            src="https://res.cloudinary.com/dml6gxfmn/video/upload/v1734313698/videos1_r2lzed.mp4"
+            type="video/mp4"
+          />
         </video>
-      </div>
 
-      <div className="flex items-center absolute bottom-[22vh] right-[24vw] z-10 hover:cursor-pointer">
-        <RotatingText
-          text="Crafting Brands • Design Excellence • Innovation •"
-          imageSrc="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734314237/NE_Arrow_Icon_dlskzh.svg"
-        />
+        <div className="absolute -left-14 -top-14 z-10 hover:cursor-pointer">
+          <RotatingText
+            text="Crafting Brands • Design Excellence • Innovation •"
+            imageSrc="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734314237/NE_Arrow_Icon_dlskzh.svg"
+          />
+        </div>
       </div>
 
       <div className="w-[90%] text-center pt-5 md:pt-10 mb-5 md:mb-20 z-10 overflow-hidden custom-font">
@@ -159,13 +163,13 @@ const ContactUs = () => {
       </div>
 
       <div className="bg-white md:mx-16 self-start rounded-xl p-7 flex flex-col gap-5 z-10">
-        <p className="font-medium text-md text-fontColor">
+        <p className="font-semibold text-md text-fontColor">
           Get in touch with us to discuss your next project — let's create
           something amazing together!
         </p>
         <div className="z-10 flex gap-3 contact-buttons section-1">
           <button
-            className=" bg-black text-white font-medium rounded-xl py-2 px-3 flex gap-2 items-center justify-center"
+            className=" bg-black text-white font-medium rounded-3xl py-2 px-3 flex gap-2 items-center justify-center"
             label="E-mail Us"
             onClick={() =>
               (window.location.href = "mailto:krish@frenchfryfeatures.com")
@@ -175,14 +179,14 @@ const ContactUs = () => {
           </button>
 
           <button
-            className=" bg-black text-white font-medium rounded-xl py-2 px-3 flex gap-2 items-center justify-center"
+            className=" bg-black text-white font-medium rounded-3xl py-2 px-3 flex gap-2 items-center justify-center"
             onClick={() => (window.location.href = "https://wa.me/8799111110")}
           >
             <FaWhatsapp size={18} />
           </button>
 
           <button
-            className=" bg-black text-white font-medium rounded-xl py-2 px-3 flex gap-2 items-center justify-center"
+            className=" bg-black text-white font-medium rounded-3xl py-2 px-3 flex gap-2 items-center justify-center"
             onClick={() => (window.location.href = "/connect")}
           >
             <ContactIcon size={20} />

@@ -36,7 +36,7 @@ const Scroller = () => {
   }, []);
 
   return (
-    <div className="scroller-container overflow-hidden">
+    <div id="scroller-container-pixel" className="scroller-container overflow-hidden">
       <div ref={triggerRef}>
         <div className="flex justify-center z-20 leading-[8rem]">
           <p className="custom-font text-[6rem] font-bold text-accent p-3 rounded-md">
@@ -75,18 +75,7 @@ const Scroller = () => {
               </div>
             </Link>
             
-            <Link href={"/projects/portfolio"}>
-              <div className="img img-2 w-[60vw] h-[60vh] relative">
-                <Image
-                  src="https://res.cloudinary.com/dml6gxfmn/image/upload/v1734312317/framer1_fxyzhh.jpg"
-                  alt="B2"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-3xl"
-                />
-              </div>
-            </Link>
-        
+          
             <Link href={"projects/entise"}>
               <div className="img img-1 w-[60vw] h-[60vh] relative">
                 <Image
@@ -99,7 +88,18 @@ const Scroller = () => {
               </div>
             </Link>
 
-           
+            <Link href={"/Projects"}>
+              <div className="img img-2 w-[60vw] h-[60vh] relative">
+                <Image
+                  src="https://res.cloudinary.com/dml6gxfmn/image/upload/v1735209097/Screenshot_2024-12-26_154611_hnnqvm.png"
+                  alt="B2"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-3xl"
+                />
+              </div>
+            </Link>
+        
 
             
           </div>

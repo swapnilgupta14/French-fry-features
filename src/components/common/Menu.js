@@ -142,7 +142,7 @@ const Menu = ({ toggleMenu }) => {
       ref={menuRef}
     >
       <div className="flex justify-between items-center px-9">
-        <div className="text-white text-2xl font-bold">French Fry Features</div>
+        <div className="text-white text-2xl font-bold custom-font">FRENCH FRY FEATURES</div>
         <div className="flex justify-center items-center space-x-3">
           <Button
             bgColor="bg-white"

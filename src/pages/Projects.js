@@ -1,69 +1,176 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/common/Header";
 import { projectDetails } from "../data/ProjectData";
-import UseLenis from "@/utils/customHooks/UseLenis";
 
 export default function Projects() {
   const projectData = Object.values(projectDetails);
-  UseLenis();
+  const [activeProject, setActiveProject] = useState(projectData[0]?.id || "");
+  const rightSectionRef = useRef(null);
+
+  const scrollToProject = (id) => {
+    const targetProject = document.getElementById(id);
+    if (targetProject) {
+      targetProject.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActiveProject(id);
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!rightSectionRef.current) return;
+
+      const scrollPosition = rightSectionRef.current.scrollTop;
+      const viewportHeight = rightSectionRef.current.clientHeight;
+      const scrollThreshold = viewportHeight * 0.3;
+
+      let newActiveProject = activeProject;
+
+      projectData.forEach((project) => {
+        const projectElement = document.getElementById(project.id);
+        if (projectElement) {
+          const projectTop = projectElement.offsetTop - 64; // Header offset
+          const projectBottom = projectTop + projectElement.offsetHeight;
+
+          if (
+            scrollPosition >= projectTop - scrollThreshold &&
+            scrollPosition < projectBottom - scrollThreshold
+          ) {
+            newActiveProject = project.id;
+          }
+        }
+      });
+
+      if (newActiveProject !== activeProject) {
+        setActiveProject(newActiveProject);
+      }
+    };
+
+    const rightSection = rightSectionRef.current;
+    if (rightSection) {
+      rightSection.addEventListener("scroll", handleScroll);
+      return () => rightSection.removeEventListener("scroll", handleScroll);
+    }
+  }, [activeProject, projectData]);
+
+  const handleNavigation = (direction) => {
+    const currentIndex = projectData.findIndex(
+      (project) => project.id === activeProject
+    );
+    const nextIndex =
+      direction === "next"
+        ? Math.min(currentIndex + 1, projectData.length - 1)
+        : Math.max(currentIndex - 1, 0);
+
+    if (projectData[nextIndex]?.id !== activeProject) {
+      scrollToProject(projectData[nextIndex]?.id);
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+        handleNavigation("next");
+      } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+        handleNavigation("prev");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeProject]);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center gap-2 overflow-hidden">
-      <Header />
+    <div className="relative w-full h-screen overflow-hidden flex flex-col">
+      <Header className="fixed top-0 w-full z-50 pr-[24px]" />
 
-      <div className="custom-font text-7xl text-start px-10 w-full py-5 text-accent">
-        ALL PROJECTS
-      </div>
-
-      {projectData.map((project, index) => (
-        <div
-          key={project.id}
-          className="h-[100vh] flex flex-col items-center justify-center w-4/5 rounded-lg p-8 space-y-16 md:space-y-5"
-        >
-          <div className="flex flex-col items-center justify-center">
-            <p className="text-7xl font-medium z-10">
-              <span className="text-2xl font-medium px-3">({index + 1})</span>
-              {project.name}
-            </p>
-            
-            <div className="flex flex-col items-center justify-center p-10 mt-[-3.2rem] rounded-xl w-[60vw] h-[60vh] overflow-hidden">
-              <Image
-                src={project.imageFilesHero.url}
-                alt={project.label}
-                width={1000}
-                height={800}
-                className="object-cover w-full h-full rounded-xl"
-              />
+      <div className="w-full flex-1 flex">
+        <div className="w-1/4 fixed left-0 h-[calc(100vh-64px)] p-8 overflow-y-auto flex flex-col justify-center">
+          <div className="flex flex-col justify-end">
+            <div className="custom-font text-4xl text-black mb-12 relative">
+              ALL PROJECTS
+              <div className="absolute -bottom-3 left-0 w-24 h-1 bg-accent"></div>
             </div>
-          </div>
-
-          <div className="flex justify-between items-center w-full">
-            <div className="flex-1 flex-col justify-center items-center w-[70%]">
-              <div>
-                <button className="py-1 px-4 border-2 border-accent rounded-full text-accent">
-                  {project.type}
-                </button>
-                <p className="mt-5 mx-2">{project.tech}</p>
-                <div>
-                  <Link
-                    href={`/projects/${project.id}`}
-                    className="inline-block py-1 px-4 my-3 rounded-full text-white bg-accent hover:bg-accent/90 transition-colors"
-                  >
-                    View Project
-                  </Link>
+            <div className="space-y-4">
+              {projectData.map((project, index) => (
+                <div
+                  key={project.id}
+                  onClick={() => scrollToProject(project.id)}
+                  className={`group cursor-pointer transition-all duration-300 ${
+                    activeProject === project.id
+                      ? "text-accent translate-x-4"
+                      : "text-gray-600 hover:text-accent hover:translate-x-2"
+                  }`}
+                >
+                  <div className="flex items-center space-x-3 ">
+                    <span
+                      className={`text-xs font-mono ${
+                        activeProject === project.id
+                          ? "text-accent"
+                          : "text-gray-900 group-hover:text-accent"
+                      }`}
+                    >
+                      ({index + 1})
+                    </span>
+                    <h3
+                      className={`font-bold ${
+                        activeProject === project.id ? "text-xl" : "text-md"
+                      }`}
+                    >
+                      {project.name}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="flex-1 flex-col gap-1 justify-center items-end self-end max-w-[50%]">
-              <p className="text-accent">{project.label}</p>
-              <p className="text-md">{project.description}</p>
+              ))}
             </div>
           </div>
         </div>
-      ))}
-    </section>
+
+        <div
+          ref={rightSectionRef}
+          className="w-3/4 ml-[25%] h-[calc(100vh-100px)] rounded-2xl overflow-y-auto scroll-smooth bg-black/10 mt-6"
+        >
+          {projectData.map((project) => (
+            <div
+              key={project.id}
+              id={project.id}
+              className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center p-8"
+            >
+              <div className="w-full max-w-4xl space-y-8">
+                <div className="relative group z-40">
+                  <Image
+                    src={project.imageFilesHero.url}
+                    alt={project.label}
+                    width={1000}
+                    height={800}
+                    className="rounded-xl w-full h-[40vh] object-cover transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl flex items-center justify-center">
+                    <Link
+                      href={`/projects/${project.id}`}
+                      className="bg-accent text-white px-6 py-3 rounded-full transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500"
+                    >
+                      View Project
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h2 className="text-3xl custom-font">{project.name}</h2>
+                  <div className="flex items-center space-x-4">
+                    <span className="px-4 py-1 border-2 border-accent rounded-full text-accent">
+                      {project.type}
+                    </span>
+                    <p className="text-gray-600">{project.tech}</p>
+                  </div>
+                  <p className="text-lg max-w-2xl">{project.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

@@ -39,8 +39,7 @@ html {
 }
 
 body {
-  background: linear-gradient(90deg, #fff7f4 0%, #cce5ff 88%);
-}
+  background: linear-gradient(90deg, #fff7f4 0%, #cce5ff 96%);}
 
 .blend-css {
   mix-blend-mode:luminosity;
