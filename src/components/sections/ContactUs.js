@@ -124,7 +124,7 @@ const ContactUs = () => {
       <div className="w-[90%] text-center pt-5 md:pt-10 mb-5 md:mb-20 z-10 overflow-hidden custom-font">
         <p
           id="text-split"
-          className="text-6xl md:text-[4rem] font-medium text-fontColor leading-tight md:leading-[6rem] text-left relative z-10"
+          className="text-6xl md:text-[4rem] font-semibold text-fontColor leading-tight md:leading-[6rem] text-left relative z-10"
         >
           We design, build, and ship
           <span>world-class digital products for</span>

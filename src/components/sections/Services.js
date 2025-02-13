@@ -110,14 +110,14 @@ const Services = () => {
                 }`}
                 onMouseEnter={() => handleHover(service)}
               >
-                <div className="group relative cursor-pointer text-[4.2rem] leading-[5rem]">
-                  <span className="inline-block transition duration-500 ease-out group-hover:-translate-y-[140%] ">
+                <div className="group relative cursor-pointer text-[4.2rem] leading-[5rem] pl-5 font-semibold">
+                  <span className="inline-block transform transition duration-500 ease-out scale-100 group-hover:scale-105">
                     {service.name}
                     <span className="text-[1rem] mx-3">(0{index + 1})</span>
                   </span>
-                  <span className="absolute left-0 translate-y-[200%] rotate-12 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
+                  {/* <span className="absolute left-0 translate-y-[200%] rotate-12 inline-block transition duration-500 ease-out group-hover:translate-y-0 group-hover:rotate-0">
                     {service.name}
-                  </span>
+                  </span> */}
                 </div>
               </li>
             </Link>

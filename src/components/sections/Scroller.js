@@ -19,12 +19,12 @@ const Scroller = () => {
       {
         translateX: "-160vw",
         ease: "none",
-        duration: 1,
+        duration: 0.5, // Reduced from 1 to 0.5 for faster animation
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "5000 top",
-          scrub: 0.3,
+          end: "2500 top", // Reduced from 5000 to 2500 for shorter scroll distance
+          scrub: 0.05, // Reduced from 0.1 to 0.05 for more immediate response
           pin: true,
         },
       }
@@ -37,16 +37,16 @@ const Scroller = () => {
 
   return (
     <div id="scroller-container-pixel" className="scroller-container overflow-hidden">
-      <div ref={triggerRef}>
+      <div ref={triggerRef} className="pt-20">
         <div className="flex justify-center z-20 leading-[8rem]">
-          <p className="custom-font text-[6rem] font-bold text-accent p-3 rounded-md">
+          <p className="custom-font text-[6rem] font-bold text-accent pt-3 rounded-md">
             We make every pixel worth it.
           </p>
         </div>
 
         <div
           ref={sectionRef}
-          className="h-[70vh] w-[250vw] flex relative gap-10"
+          className="h-[65vh] w-[250vw] flex relative gap-10"
         >
           <section className="w-[30vw] flex justify-around items-center"></section>
 
@@ -74,8 +74,7 @@ const Scroller = () => {
                 />
               </div>
             </Link>
-            
-          
+
             <Link href={"projects/entise"}>
               <div className="img img-1 w-[60vw] h-[60vh] relative">
                 <Image
@@ -99,9 +98,6 @@ const Scroller = () => {
                 />
               </div>
             </Link>
-        
-
-            
           </div>
           <section className="w-[30vw] flex justify-around items-center"></section>
         </div>

@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>French Fry Features</title>
+        {/* <title>French Fry Features</title> */}
         <link
           rel="preload"
           href="/GLDDisplay-Black.woff2"

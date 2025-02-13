@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
       <p
         className="w-full text-center text-white custom-font"
-        style={{ fontSize: "10vw" }}
+        style={{ fontSize: "7vw" }}
       >
         FRENCH FRY FEATURES
       </p>

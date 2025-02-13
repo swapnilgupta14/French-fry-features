@@ -43,9 +43,9 @@ const Hero = () => {
               <Image src={DownArrow} alt="North East Arrow" />
             </div>
             <p className=" text-accent px-7 font-semibold">
-              <span className="poppins-semibold-italic">I</span>MP
-              <span className="poppins-semibold-italic">A</span>CTFU
-              <span className="poppins-semibold-italic">L</span>
+              <span className="poppins-semibold-italic">I</span>mp
+              <span className="poppins-semibold-italic">a</span>ctfu
+              <span className="poppins-semibold-italic">l</span>
             </p>
           </span>
 
